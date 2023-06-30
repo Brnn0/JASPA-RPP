@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Passero One;
+    src: url(/font/PasseroOne-Regular.ttf);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/fundo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 40px;
+}
+
+h1 {
+    font-family: Passero One;
+    font-size: 180px;
+    text-align: center;
+    color: #FFE600;
+    margin-top: 5%;
+    margin-bottom: 5px;
+    text-shadow: -2px -2px 0 #552606,
+                2px -2px 0 #552606,
+                -2px 2px 0 #552606,
+                2px 2px 0 #552606,
+                3px 3px 5px #000000;
+}
+
+h2 {
+    font-family: Passero One;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -3.5%;
+    color: #FFFDF9;
+    text-shadow: -2px -2px 0 #2B5C19,
+              2px -2px 0 #2B5C19,
+              -2px 2px 0 #2B5C19,
+              2px 2px 0 #2B5C19,
+              5px 5px 7px #000000;
+}
+
+
+.btn-start {
+    background-color: #D8AE42;
+    font-family: Passero One;
+    color: #552606;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 50px;
+    border-radius: 60px;
+    width: 200px;
+    margin: 5% auto;
+}
+
+.btn-start:hover {
+    color: yellow;
+}
+
+.btn-start:active {
+    box-shadow: 0 2px rgb(61, 51, 8);
+    transform: translateY(4px);
+}
+
+.btn-leader {
+    background: transparent url(/img/botao/lider.png) no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #D8AE42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    float: left;
+}
+
+.btn-leader:hover {
+    background-image: url(/img/botao/liderhover.png);
+}
+
+.btn-leader:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
+}
+
+.btn-perfil {
+    background: transparent url(/img/botao/perfil.png) no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #D8AE42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    float: right;
+}
+
+.btn-perfil:hover {
+    background-image: url(/img/botao/perfilhover.png);
+}
+
+.btn-perfil:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: grey;
+}

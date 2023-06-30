@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Passero One;
+    src: url(font/PasseroOne-Regular.ttf);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('/fundo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 40px;
+}
+
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d8ae42;
+    text-align: center;
+    border-radius: 24px;
+    outline: none;
+    border: 2px solid #301C06;
+}
+
+.box input[type="button"] {
+    border: 0;
+    background: #fcff52;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4d2c06;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #301C06;
+    border-radius: 8px;
+    transition: 0.25s;
+    font-family: Passero One;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -3.5%;
+}
+
+.box input[type="button"]:hover {
+    border-color: #fcff52;
+}
+
+.box input[type="button"]:active {
+    box-shadow: 0 2px rgb(61, 51, 8);
+    transform: translateY(4px);
+}
+
+form img {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+
+.icone {
+    background: white;
+    border-radius: 100%;
+    border: 2px solid #4d2c06;
+}
+
+.btn-leader {
+    background: transparent url(/img/botao/lider.png) no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #d8ae42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    float: left;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.btn-leader:hover {
+    background-image: url(/img/botao/liderhover.png);
+}
+
+.btn-leader:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
+}
+
+.btn-back {
+    background: transparent url(/img/botao/back.png) no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #d8ae42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    float: right;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.btn-back:hover {
+    background-image: url(/img/botao/backhover.png);
+}
+
+.btn-back:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
+}
