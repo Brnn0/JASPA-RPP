@@ -4,11 +4,6 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: Passero One;
-    src: url(font/PasseroOne-Regular.ttf);
-}
-
 body {
     height: 100vh;
     display: flex;
@@ -47,7 +42,7 @@ body {
     color: #301C06;
     border-radius: 8px;
     transition: 0.25s;
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     font-size: 28px;
     text-align: center;
     margin-top: -3.5%;

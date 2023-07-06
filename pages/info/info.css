@@ -4,16 +4,11 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: Passero One;
-    src: url(/font/PasseroOne-Regular.ttf);
-}
-
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url('/fundo.jpg');
+    background-image: url('/assets/img/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,7 +16,7 @@ body {
 }
 
 h1 {
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     font-size: 40px;
     color: #552606;
 }
@@ -40,7 +35,7 @@ h1 {
 }
 
 h2 {
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     font-size: 25px;
     text-align: center;
     color: #FF7E7E;
@@ -103,7 +98,7 @@ img {
 }
 
 .btn-back {
-    background: transparent url(/img/botao/back.png) no-repeat center top;
+    background: transparent url(/assets/img/button/back.png) no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
     background-color: #D8AE42;
@@ -117,7 +112,7 @@ img {
 }
 
 .btn-back:hover {
-    background-image: url(/img/botao/backhover.png);
+    background-image: url(/assets/img/button/backHover.png);
 }
 
 .btn-back:active {

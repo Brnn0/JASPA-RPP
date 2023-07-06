@@ -4,16 +4,11 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: Passero One;
-    src: url(/font/PasseroOne-Regular.ttf);
-}
-
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url('/fundo.jpg');
+    background-image: url('/assets/img/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,7 +16,7 @@ body {
 }
 
 h1 {
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     font-size: 180px;
     text-align: center;
     color: #FFE600;
@@ -35,7 +30,7 @@ h1 {
 }
 
 h2 {
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     font-size: 28px;
     text-align: center;
     margin-top: -3.5%;
@@ -50,7 +45,7 @@ h2 {
 
 .btn-start {
     background-color: #D8AE42;
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     color: #552606;
     border-color: #552606;
     box-shadow: 0 5px #552606;
@@ -73,7 +68,7 @@ h2 {
 }
 
 .btn-leader {
-    background: transparent url(/img/botao/lider.png) no-repeat center top;
+    background: transparent url(/assets/img/button/podium.png) no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
     background-color: #D8AE42;
@@ -87,7 +82,7 @@ h2 {
 }
 
 .btn-leader:hover {
-    background-image: url(/img/botao/liderhover.png);
+    background-image: url(/assets/img/button/podiumHover.png);
 }
 
 .btn-leader:active {
@@ -96,7 +91,7 @@ h2 {
 }
 
 .btn-perfil {
-    background: transparent url(/img/botao/perfil.png) no-repeat center top;
+    background: transparent url(/assets/img/button/profile.png) no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
     background-color: #D8AE42;
@@ -110,7 +105,7 @@ h2 {
 }
 
 .btn-perfil:hover {
-    background-image: url(/img/botao/perfilhover.png);
+    background-image: url(/assets/img/button/profileHover.png);
 }
 
 .btn-perfil:active {
