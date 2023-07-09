@@ -21,7 +21,7 @@ h1 {
     font-size: 45px;
     text-align: center;
     color: #FCFF52;
-    margin-top: 5%;
+    margin-top: 1%;
     text-shadow: -2px -2px 0 #552606,
               2px -2px 0 #552606,
               -2px 2px 0 #552606,
@@ -41,6 +41,7 @@ h2 {
     font-family: 'Passero One', cursive;
     font-size: 40px;
     text-align: center;
+    margin-top: -1%;
     color: #ffffff;
     text-shadow: -2px -2px 0 #552606,
               2px -2px 0 #552606,
@@ -51,7 +52,7 @@ h2 {
 .container {
     display: flex;
     max-width: 900px;
-    margin: 3% auto;
+    margin: 1px auto;
 }
 
 label {
@@ -91,18 +92,43 @@ img {
 
 .card-input {
     background-color: rgb(238, 206, 101);
-    border: 2px solid #552606;
-    box-shadow: 3px 3px rgb(9, 75, 14);
+    border: 2px solid #00ff0d;
+    box-shadow: 3px 3px rgb(10, 77, 16);
+    margin: 30px;
+}
+
+.card-input-element-no {
+    display: none;
+}
+
+.card-input-no {
+    background-color: rgb(238, 206, 101);
+    border: 2px solid #f70000;
+    box-shadow: 3px 3px rgb(252, 0, 0);
     margin: 30px;
     padding: 00px;
 }
 
-.card-input:hover {
+.btn-back {
+    background-color: #D8AE42;
+    font-family: Passero One;
+    color: #552606;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    text-align: center;
     cursor: pointer;
-    transform: translateY(-5px);
+    padding: 10px;
+    font-size: 50px;
+    border-radius: 60px;
+    width: 160px;
+    margin: 5% auto;
 }
 
-.card-input-element:checked + .card-input {
-     border: 5px solid #552606;
-     transform: translateY(-4px);
+.btn-back:hover {
+    color: yellow;
+}
+
+.btn-back:active {
+    box-shadow: 0 2px rgb(61, 51, 8);
+    transform: translateY(4px);
 }

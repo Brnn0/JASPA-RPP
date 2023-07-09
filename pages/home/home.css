@@ -67,7 +67,7 @@ h2 {
     transform: translateY(4px);
 }
 
-.btn-leader {
+.btn-podium {
     background: transparent url(/assets/img/button/podium.png) no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
@@ -81,16 +81,16 @@ h2 {
     float: left;
 }
 
-.btn-leader:hover {
+.btn-podium:hover {
     background-image: url(/assets/img/button/podiumHover.png);
 }
 
-.btn-leader:active {
+.btn-podium:active {
     box-shadow: 0 2px rgb(32, 27, 4);
     transform: translateY(4px);
 }
 
-.btn-perfil {
+.btn-profile {
     background: transparent url(/assets/img/button/profile.png) no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
@@ -104,11 +104,11 @@ h2 {
     float: right;
 }
 
-.btn-perfil:hover {
+.btn-profile:hover {
     background-image: url(/assets/img/button/profileHover.png);
 }
 
-.btn-perfil:active {
+.btn-profile:active {
     box-shadow: 0 2px rgb(32, 27, 4);
     transform: translateY(4px);
 }

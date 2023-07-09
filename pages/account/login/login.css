@@ -4,11 +4,16 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: Passero One;
+    src: url(font/PasseroOne-Regular.ttf);
+}
+
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url('/fundo.jpg');
+    background-image: url('fundo.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +34,7 @@ body {
     border: 2px solid #301C06;
 }
 
-.box input[type="button"] {
+.box input[type="text"] {
     border: 0;
     background: #fcff52;
     display: block;
@@ -42,17 +47,55 @@ body {
     color: #301C06;
     border-radius: 8px;
     transition: 0.25s;
-    font-family: 'Passero One', cursive;
+    font-family: Passero One;
     font-size: 28px;
     text-align: center;
     margin-top: -3.5%;
 }
 
-.box input[type="button"]:hover {
+.box input[type="password"] {
+    border: 0;
+    background: #fcff52;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4d2c06;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #301C06;
+    border-radius: 8px;
+    transition: 0.25s;
+    font-family: Passero One;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -3.5%;
+}
+
+.box input[type="submit"] {
+    border: 0;
+    background: #fcff52;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4d2c06;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #301C06;
+    border-radius: 8px;
+    transition: 0.25s;
+    font-family: Passero One;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -3.5%;
+}
+
+.box input[type="submit"]:hover {
     border-color: #fcff52;
 }
 
-.box input[type="button"]:active {
+.box input[type="submit"]:active {
     box-shadow: 0 2px rgb(61, 51, 8);
     transform: translateY(4px);
 }
@@ -70,7 +113,7 @@ form img {
 }
 
 .btn-leader {
-    background: transparent url(/img/botao/lider.png) no-repeat center top;
+    background: transparent url(lider.png) no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
     background-color: #d8ae42;
@@ -87,7 +130,7 @@ form img {
 }
 
 .btn-leader:hover {
-    background-image: url(/img/botao/liderhover.png);
+    background-image: url(liderhover.png);
 }
 
 .btn-leader:active {
@@ -96,7 +139,7 @@ form img {
 }
 
 .btn-back {
-    background: transparent url(/img/botao/back.png) no-repeat center top;
+    background: transparent url(voltar.svg) no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
     background-color: #d8ae42;
@@ -110,10 +153,6 @@ form img {
     position: absolute;
     bottom: 15px;
     right: 15px;
-}
-
-.btn-back:hover {
-    background-image: url(/img/botao/backhover.png);
 }
 
 .btn-back:active {
