@@ -5,20 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passero+One&display=swap" rel="stylesheet">
     <title>JASPA</title>
     <link rel="stylesheet" type="text/css" href="login.css" />
 </head>
 
 <body>
     <form class="box" action="login.html" method="post">
-        <img class="icon">
-        <input type="text" name="usuario" placeholder="Usuário" id="usuario">
-        <input type="password" name="senha" placeholder="Senha" id="senha">
-        <input type="submit" value="LOGIN">
+        <img class="icon" src="/assets/img/icon.png">
+        <input type="email" name="email" placeholder="E-Mail" id="email">
+        <input type="password" name="senha" placeholder="Senha" id="password">
+        <input type="submit" class="submit" value="Login">
     </form>
 
     <nav>
-        <button type="button" class="btn-back" onclick="nextPage('/pages/home/home')"></button>
+        <button type="button" class="btn-back" onclick="nextPage('/pages/account/account/account')"></button>
     </nav>
 
     <script src="/js/changePage.js"></script>
