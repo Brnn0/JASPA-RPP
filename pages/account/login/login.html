@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,15 +11,14 @@
 
 <body>
     <form class="box" action="login.html" method="post">
-        <img class="icone" src="perfil.png" alt="ícone de usuário">
+        <img class="icon">
         <input type="text" name="usuario" placeholder="Usuário" id="usuario">
         <input type="password" name="senha" placeholder="Senha" id="senha">
         <input type="submit" value="LOGIN">
     </form>
 
     <nav>
-        <button type="button" class="btn-leader"></button>
-        <button type="button" class="btn-back"></button>
+        <button type="button" class="btn-back" onclick="nextPage('/pages/home/home')"></button>
     </nav>
 
     <script src="/js/changePage.js"></script>

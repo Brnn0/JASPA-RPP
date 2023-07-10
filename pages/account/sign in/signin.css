@@ -4,16 +4,11 @@
     padding: 0;
 }
 
-@font-face {
-    font-family: Passero One;
-    src: url(../font/PasseroOne-Regular.ttf);
-}
-
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url('../fundo.jpg');
+    background-image: url('/assets/img/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,11 +27,13 @@ body {
     border-radius: 24px;
     outline: none;
     border: 2px solid #301C06;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
 }
 
-.box input[type="text"] {
+#user {
     border: 0;
-    background: #fcff52;
+    background: #ffffff;
     display: block;
     margin: 20px auto;
     text-align: center;
@@ -47,15 +44,15 @@ body {
     color: #301C06;
     border-radius: 8px;
     transition: 0.25s;
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     font-size: 28px;
     text-align: center;
     margin-top: -3.5%;
 }
 
-.box input[type="password"] {
+#email {
     border: 0;
-    background: #fcff52;
+    background: #ffffff;
     display: block;
     margin: 20px auto;
     text-align: center;
@@ -66,15 +63,15 @@ body {
     color: #301C06;
     border-radius: 8px;
     transition: 0.25s;
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     font-size: 28px;
     text-align: center;
     margin-top: -3.5%;
 }
 
-.box input[type="submit"] {
+#password {
     border: 0;
-    background: #fcff52;
+    background: #ffffff;
     display: block;
     margin: 20px auto;
     text-align: center;
@@ -85,19 +82,31 @@ body {
     color: #301C06;
     border-radius: 8px;
     transition: 0.25s;
-    font-family: Passero One;
+    font-family: 'Passero One', cursive;
     font-size: 28px;
     text-align: center;
     margin-top: -3.5%;
 }
 
-.box input[type="submit"]:hover {
-    border-color: #fcff52;
+.submit {
+    background-color: #f1df35;
+    font-family: 'Passero One', cursive;
+    color: #552606;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 60px;
+    width: 200px;
+    margin: 5% auto;
 }
 
-.box input[type="submit"]:active {
+.submit:active {
     box-shadow: 0 2px rgb(61, 51, 8);
     transform: translateY(4px);
+    color: #fdae03;
 }
 
 form img {
@@ -106,40 +115,20 @@ form img {
     margin: 30px;
 }
 
-.icone {
+.icon {
     background: white;
     border-radius: 100%;
     border: 2px solid #4d2c06;
 }
 
-.btn-leader {
-    background: transparent url(../img/botao/lider.png) no-repeat center top;
-    background-size: 66px;
-    background-position: center 15px;
-    background-color: #d8ae42;
-    border-color: #552606;
-    cursor: pointer;
+form img {
     width: 100px;
     height: 100px;
-    border-radius: 100px;
-    box-shadow: 0 5px #3b1b05;
-    float: left;
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-}
-
-.btn-leader:hover {
-    background-image: url(../img/botao/liderhover.png);
-}
-
-.btn-leader:active {
-    box-shadow: 0 2px rgb(32, 27, 4);
-    transform: translateY(4px);
+    margin: 30px;
 }
 
 .btn-back {
-    background: transparent url(../img/botao/back.png) no-repeat center top;
+    background: transparent url(/assets/img/button/back.png) no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
     background-color: #d8ae42;
@@ -153,6 +142,10 @@ form img {
     position: absolute;
     bottom: 15px;
     right: 15px;
+}
+
+.btn-back:hover {
+    background-image: url(/assets/img/button/backHover.png);
 }
 
 .btn-back:active {
