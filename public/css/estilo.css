@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 40px;
+}
+
+/* HOME */
+
+.titleHome {
+    font-family: 'Passero One', cursive;
+    font-size: 180px;
+    text-align: center;
+    color: #FFE600;
+    margin-top: 5%;
+    margin-bottom: 5px;
+    text-shadow: -3px -3px 0 #8a3d09,
+                3px -3px 0 #8a3d09,
+                -3px 3px 0 #8a3d09,
+                3px 3px 0 #8a3d09,
+                4px 4px 6px #000000;
+}
+
+.subTitleHome {
+    font-family: 'Passero One', cursive;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -3.5%;
+    color: #FFFDF9;
+    text-shadow: -2px -2px 0 #369214,
+              2px -2px 0 #369214,
+              -2px 2px 0 #369214,
+              2px 2px 0 #369214,
+              5px 5px 7px #000000;
+}
+
+
+.btn-start {
+    display: block;
+    background-color: #D8AE42;
+    font-family: 'Passero One', cursive;
+    color: #552606;
+    border: 50px #552606;
+    box-shadow: 0 5px #552606;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 50px;
+    border-radius: 60px;
+    width: 200px;
+    margin: 5% auto;
+}
+
+.btn-start:hover {
+    color: yellow;
+}
+
+.btn-start:active {
+    box-shadow: 0 2px rgb(61, 51, 8);
+    transform: translateY(4px);
+}
+
+.btn-podium {
+    background: transparent url('../assets/img/button/podium.png') no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #D8AE42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    float: left;
+}
+
+.btn-podium:hover {
+    background-image: url('../assets/img/button/podiumHover.png');
+}
+
+.btn-podium:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
+}
+
+.btn-profile {
+    background: transparent url('../assets/img/button/profile.png') no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #D8AE42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    float: right;
+}
+
+.btn-profile:hover {
+    background-image: url('../assets/img/button/profileHover.png');
+}
+
+.btn-profile:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.scoreTitle {
+    font-family: 'Passero One', cursive;
+    font-size: 45px;
+    text-align: center;
+    color: #FCFF52;
+    margin-top: 1%;
+    text-shadow: -2px -2px 0 #552606,
+              2px -2px 0 #552606,
+              -2px 2px 0 #552606,
+              2px 2px 0 #552606;
+}
+
+.scoreNumber {
+    font-family: 'Coiny', cursive;
+    color: white;
+    text-shadow: -2px -2px 0 #000000,
+              2px -2px 0 #000000,
+              -2px 2px 0 #000000,
+              2px 2px 0 #000000;
+}
+
+/* JOGO */
+
+.gameDesc {
+    font-family: 'Passero One', cursive;
+    font-size: 40px;
+    text-align: center;
+    margin-top: -1%;
+    color: #ffffff;
+    text-shadow: -2px -2px 0 #552606,
+              2px -2px 0 #552606,
+              -2px 2px 0 #552606,
+              2px 2px 0 #552606;
+}
+
+.card-container {
+    display: flex;
+    max-width: 900px;
+    margin: 1px auto;
+}
+
+.game-label {
+    width: 100%;
+}
+
+.card-title {
+    text-align: center;
+    padding: 10px;
+    font-family: "Candara";
+    font-size: 20px
+}
+
+.card-status {
+    text-align: center;
+    padding: 7px;
+    font-family: "Candara";
+}
+
+.animal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+.animal-photo {
+    width: 200px;
+    height: 200px;
+    border-top: 2px solid #552606;
+    border-bottom: 2px solid #552606;
+}
+
+.card-input-element {
+    display: none;
+}
+
+.card-input {
+    background-color: rgb(238, 206, 101);
+    border: 2px solid #552606;
+    box-shadow: 3px 3px rgb(9, 75, 14);
+    margin: 30px;
+    padding: 00px;
+}
+
+.card-input:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.card-input-element:checked + .card-input {
+     border: 5px solid #552606;
+     transform: translateY(-4px);
+}
+
+/* CONTA */
+
+.box {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d8ae42;
+    text-align: center;
+    border-radius: 24px;
+    outline: none;
+    border: 2px solid #301C06;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+
+}
+
+.btn-account {
+    background-color: #f1df35;
+    font-family: 'Passero One', cursive;
+    color: #552606;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 60px;
+    width: 200px;
+    margin: 5% auto;
+}
+
+.btn-account:active {
+    box-shadow: 0 2px rgb(61, 51, 8);
+    transform: translateY(4px);
+    color: #fdae03;
+}
+
+form img {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+
+.icon {
+    src: url('../assets/img/icon.png');
+    background: white;
+    border-radius: 100%;
+    border: 2px solid #4d2c06;
+}
+
+/* CADASTRO */
+
+.user {
+    border: 0;
+    background: #ffffff;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4d2c06;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #301C06;
+    border-radius: 8px;
+    transition: 0.25s;
+    font-family: 'Passero One', cursive;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -3.5%;
+}
+
+.email {
+    border: 0;
+    background: #ffffff;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4d2c06;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #301C06;
+    border-radius: 8px;
+    transition: 0.25s;
+    font-family: 'Passero One', cursive;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -3.5%;
+}
+
+.password {
+    border: 0;
+    background: #ffffff;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #4d2c06;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #301C06;
+    border-radius: 8px;
+    transition: 0.25s;
+    font-family: 'Passero One', cursive;
+    font-size: 28px;
+    text-align: center;
+    margin-top: -3.5%;
+}
+
+form img {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+
+/* LOGIN */
+
+/* BOTÃO */
+
+.btn-back {
+    background: transparent url('../assets/img/button/back.png') no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #d8ae42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    float: right;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.btn-back:hover {
+    background-image: url('../assets/img/button/backHover.png');
+}
+
+.btn-back:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
+}
+
+.btn-send {
+    background: transparent url('../assets/img/button/next.png') no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #d8ae42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    float: right;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
