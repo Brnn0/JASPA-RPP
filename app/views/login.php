@@ -1,10 +1,10 @@
 <?php include 'layout-top.php' ?>
 
 <form class="box" action="login.html" method="post">
-        <img class="icon" src="/assets/img/icon.png">
-        <input type="email" name="email" placeholder="E-Mail" id="email">
-        <input type="password" name="senha" placeholder="Senha" id="password">
-        <input type="submit" class="submit" value="Login">
+        <img class="icon">
+        <input type="email" name="email" placeholder="E-Mail" class="email">
+        <input type="password" name="senha" placeholder="Senha" class="password">
+        <input type="submit" class="btn-account" value="Login">
     </form>
 
     <nav>
