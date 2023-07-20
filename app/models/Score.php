@@ -6,7 +6,7 @@ class Score extends Model {
 
      protected $table = "score";
      #nao esqueça da ID
-     protected $fields = ["id","score"];
+     protected $fields = ["id_user","id","score"];
 
 }
 
