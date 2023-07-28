@@ -206,6 +206,18 @@ if ( count($parts) > 2 ){
 
 }
 
-
+foreach($_POST as $key=>$val){
+    $_SESSION['old'][$key] = $val;
+}
 //$obj->$metodo();
 call_user_func_array(array($controller, $metodo), $params_to_controller);
+
+$_SESSION['errors'] = [];
+$_SESSION['old'] = [];
+if (isset($_SESSION['flash'])){
+    foreach($_SESSION['flash'] as $key=>$val){
+        if ($_SESSION['flash'][$key]["out"]){
+            unset($_SESSION['flash'][$key]);
+        }
+    }
+}

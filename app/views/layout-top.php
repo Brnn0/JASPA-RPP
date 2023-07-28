@@ -13,6 +13,12 @@
 </head>
 <body>
 
+<?php
+#só exibirá o menu caso ESTEJA logado
+if (isset($_SESSION['user'])):
+?>
+<?php endif; ?>
+
 <!-- MENU 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -37,9 +43,27 @@
         <li class="nav-item">
           <a class="nav-link" href="<?=route('animal_ameacas')?>">animal_ameacas</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=route('autenticacao/logout')?>">Logout</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>-->
 
 <div class="container">
+
+<?php
+
+if (getFlash("success")){
+    print "<div class='alert alert-success' role='alert'>".getFlash("success")."</div>";
+} else
+if (getFlash("error")){
+    print "<div class='alert alert-danger' role='alert'>".getFlash("error")."</div>";
+}
+
+?>
+
+<script src="https://unpkg.com/imask"></script>
+
+<script src="<?=assets('js/main.js')?>" ></script>

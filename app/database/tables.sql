@@ -1,12 +1,12 @@
 DROP TABLE usuarios;
 
--- tabelas um pra muitos
-
 CREATE TABLE IF NOT EXISTS usuarios (
     id              INTEGER PRIMARY KEY,
-    user            TEXT,
-    email           TEXT,
-    senha           TEXT
+    nome            TEXT    NOT NULL,
+    dataNascimento  TEXT    NOT NULL,
+    email           TEXT    NOT NULL,
+    tipo            INTEGER NOT NULL,
+    senha           TEXT    NOT NULL
 
 );
 
@@ -17,4 +17,13 @@ CREATE TABLE IF NOT EXISTS score (
     score           INTEGER,
 
         FOREIGN KEY (id_user) REFERENCES usuarios (id)
+);
+
+CREATE TABLE IF NOT EXISTS animais (
+    id              INTEGER PRIMARY KEY,
+    nome            TEXT NOT NULL,
+    foto            TEXT NOT NULL,
+    ameaca          TEXT NOT NULL,
+    info            TEXT NOT NULL,
+    situacao        BOOLEAN NOT NULL
 );
