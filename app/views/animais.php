@@ -19,7 +19,7 @@
         <input type="text" class="form-control" name="info" placeholder="Info." value="<?=_v($data,"info")?>" >
     </label>
     
-        <input type="boolean" class="form-control" name="situacao" placeholder="Situação" value="<?=_v($data,"situacao")?>" >
+        <input type="boolean" class="form-control" name="situacao" placeholder="Situação (True ou False)" value="<?=_v($data,"situacao")?>" >
     
         
     </label>
