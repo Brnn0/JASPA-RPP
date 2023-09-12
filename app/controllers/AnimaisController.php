@@ -1,5 +1,6 @@
 <?php
 use models\Animal;
+use models\Signup;
 /**
 * Tutorial CRUD
 * Autor:Alan Klinger 05/06/2017
@@ -9,6 +10,24 @@ use models\Animal;
 #terá sempre o mesmo nome do arquivo
 #e precisa terminar com a palavra Controller
 class AnimaisController {
+
+	#construtor, é iniciado sempre que a classe é chamada
+	function __construct() {
+		#se nao existir é porque nao está logado
+		if (!isset($_SESSION["signup"])){
+			redirect("autenticacao");
+			die();
+		}
+
+
+		#proibe o usuário de entrar caso não tenha autorização
+		if ($_SESSION['signup']['tipo'] < Signup::ADMIN_USER){
+			header("HTTP/1.1 401 Unauthorized");
+			die();
+		}
+
+
+	}
 
 	/**
 	* Para acessar http://localhost/NOMEDOPROJETO/usuarios/index

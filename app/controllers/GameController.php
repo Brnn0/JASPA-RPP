@@ -18,7 +18,25 @@ class GameController {
 
 	function resposta(){
 
-		dd($_POST);
+		print_r($_POST);
+
+		//ja busca no banco o animal pela id aí nao precisa fazer o foreach
+		$dados = $this->dadosDoBanco;
+
+		$animal = null;
+		//busca o animal que foi selecionado
+		foreach($dados as $anim){
+			if ($anim['id'] == $_POST['animal']){
+				$animal = $anim;
+			}
+		}
+
+
+		if ($animal['extincao'] == true){
+			render("animalCorreto", []);
+		} else {
+			render("animalErrado", []);
+		}
 
 	}
 

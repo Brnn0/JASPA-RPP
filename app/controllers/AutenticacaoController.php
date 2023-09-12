@@ -1,5 +1,6 @@
 <?php
 use models\Signup;
+use models\Usuario;
 
 class AutenticacaoController {
 
@@ -7,17 +8,17 @@ class AutenticacaoController {
         #variáveis que serao passados para a view
         $send = [];
         #chama a view
-        render("signup", $send);
+        render("login", $send);
     }
     function logar(){
 
         $model = new Signup();
         #busca o usuario pelo email e senha
-        $user = $model->findByEmailAndSenha($_POST["email"],  $_POST["senha"]);
+        $signup = $model->findByEmailAndSenha($_POST["email"],  $_POST["senha"]);
     
-        if ($user != null){
+        if ($signup != null){
             #se encontrar salva na sessao
-            $_SESSION['user'] = $user;
+            $_SESSION['signup'] = $signup;
             redirect("home");
         } else {
             #caso contrario, manda para o login novamente

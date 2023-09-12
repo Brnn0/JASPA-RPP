@@ -5,54 +5,83 @@
     <?=$msg?>
     </div>
 <?php endif; ?>
-<h1>Cadastrar</h1>
-<form method='POST' action='<?=route('signup/salvar')?>'>
-<label class='col-md-6'>
-    Nome <span style='color:red;'>*</span>
-    <input type="text" class="form-control <?=hasError("nome","is-invalid")?>" name="nome" value="" >
-    <div class='invalid-feedback'><?=getValidationError("nome") ?></div>
-</label>
 
-<label class='col-md-6' style='position:relative'>
-    Data de nascimento <span style='color:red;'>*</span>
-    <input type="text" class="form-control <?=hasError("dataNascimento","is-invalid")?>" name="dataNascimento"
-            value="" >
+<div class="box">
 
-    <!-- para esse formato (invalid-tooltip) funcionar, o parent tem que ser relative -->
-    <div class="invalid-feedback"><?=getValidationError("dataNascimento") ?></div>
-</label>
+    <h1 class="titleSimple">
+        Cadastrar
+    </h1>
+    <br>
 
-<label class='col-md-6'>
-    E-mail
-    <input type="email" class="form-control <?=hasError("email","is-invalid")?>" name="email" value="" >
-    <div class='invalid-feedback'><?=getValidationError("email") ?></div>
-</label>
+    <form method='POST' action='<?=route('signup/salvar')?>'>
 
-<label class='col-md-6'>
-    Senha
-    <input type="password" class="form-control <?=hasError("senha","is-invalid")?>" name="senha" value="" >
-    <div class='invalid-feedback'><?=getValidationError("senha") ?></div>
-</label>
+    <label class='col-md-6'>
 
-<label class='col-md-6'>
-    Tipo
-    <select name="tipo" class="form-control" id="opcao">
-        <option selected hidden>Escolha o tipo</option>
-        <?php
-        $selected= _v($data,"tipo");
-        foreach($tipoUser as $tipo => $valor){
-            print "<option value='".$tipo."'>".$valor."</option>";
-        }
-        ?>
-    </select>
-</label>
+        <input type="text" class="form-control <?=hasError("nome","is-invalid")?>" name="nome" value="" placeholder="Nome"> 
+        <div class='invalid-feedback'><?=getValidationError("nome") ?></div>
+    </label>
 
-<button class='btn btn-primary col-12 col-md-3 mt-3'>Entrar</button>
-<a class='btn btn-secondary col-12 col-md-3 mt-3' href="<?=route("login")?>">logar</a>
-</form>
+    <label class='col-md-6'>
+        <input type="email" class="form-control" name="email" placeholder="E-Mail" value="<?=old("email", _v($data,"email"))?>" >
+    </label>
 
-<nav>
-        <a class="btn-back" href="<?=route('home')?>"></a>
-</nav>
+    <label class='col-md-6'>
+        <input type="password" class="form-control" name="senha" placeholder="Senha" value="" >
+    </label>
+
+
+    <label class='col-md-4' style='position:relative'>
+        <input type="text" class="form-control date <?=hasError("dataNascimento","is-invalid")?>" name="dataNascimento" placeholder="Aniversário"
+                value="<?=old("dataNascimento", _v($data,"dataNascimento"))?>" >
+
+        <!-- para esse formato (invalid-tooltip) funcionar, o parent tem que ser relative -->
+        <div class="invalid-tooltip"><?=getValidationError("dataNascimento") ?></div>
+    </label>
+
+    <label class='col-md-6'>
+
+        <select name="tipo" class="form-control">
+            <?php
+            foreach($tipos as $k=>$tipo){
+                _v($data,"tipo") == $k ? $selected='selected' : $selected='';
+                print "<option value='$k' $selected>$tipo</option>";
+            }
+            ?>
+        </select>
+    </label>
+
+    <button class='btn-account'>Registrar</button>
+    <a class='redirect' href="<?=route("login")?>">logar</a>
+    </form>
+
+    
+</div>
+
+<table class='tableList'>
+
+    <tr>
+        <th>Editar</th>
+        <th>Nome</th>
+        <th>Data de nascimento</th>
+        <th>Deletar</th>
+    </tr>
+
+    <?php foreach($lista as $item): ?>
+
+        <tr>
+            <td>
+                <a href='<?=route("signup/index/{$item['id']}")?>'>Editar</a>
+            </td>
+            <td><?=$item['nome']?></td>
+            <td><?=$item['dataNascimento']?></td>
+            <td>
+                <a href='<?=route("signup/deletar/{$item['id']}")?>'>Deletar</a>
+            </td>
+        </tr>
+
+    <?php endforeach; ?>
+</table>
+
+<a class="btn-back" href="<?=route('account')?>"></a>
 
 <?php include 'layout-bottom.php' ?>

@@ -2,8 +2,10 @@
 
 <form class="box">
         <img class="icon">
-        <a class="btn-account" href="<?=route('login')?>">Login</a>
-        <a class="btn-account" href="<?=route('signup')?>">Cadastrar</a>
+        <a class="btn-link" href="<?=route('login')?>">Login</a>
+        <a class="btn-link" href="<?=route('signup')?>">Cadastrar</a>
+        <a class="btn-link" href="<?=route('animais')?>">Animais</a>
+        <a class="btn-link" href="<?=route('autenticacao/logout')?>">Logout</a>
 </form>
 
 <nav>

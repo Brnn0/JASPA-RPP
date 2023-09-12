@@ -5,25 +5,30 @@
     <?=$msg?>
     </div>
 <?php endif; ?>
-<h1>Login</h1>
 <form method='POST' action='<?=route('autenticacao/logar/')?>'>
 
-<label class='col-md-4'>
-    E-mail
-    <input type="email" class="form-control" name="email" value="" >
-</label>
+<div class="box">
 
-<label class='col-md-4'>
-    Senha
-    <input type="password" class="form-control" name="senha" value="" >
-</label>
+    <h1 class="titleSimple">
+        Login
+    </h1>
+    <br> <br>
 
-<button class='btn btn-primary col-12 col-md-3 mt-3'>Entrar</button>
-<a class='btn btn-secondary col-12 col-md-3 mt-3' href="<?=route("signup")?>">Registrar</a>
-</form>
+    <label class='col-md-4'>
+        <input type="text" class="form-controlBig" name="email" value="" placeholder="E-Mail">
+    </label>
 
-<nav>
-        <a class="btn-back" href="<?=route('home')?>"></a>
-</nav>
+    <label class='col-md-4'>
+        <input type="password" class="form-controlBig" name="senha" value="" placeholder="Senha">
+    </label>
+
+    <button class='btn-account'>Entrar</button>
+    <br> <br>
+    <a class='redirect' href="<?=route("signup")?>">Registrar</a>
+    </form>
+
+</div>
+
+<a class="btn-back" href="<?=route('account')?>"></a>
 
 <?php include 'layout-bottom.php' ?>

@@ -28,6 +28,7 @@
 
 <button class='btn btn-primary col-12 col-md-3 mt-3'>Salvar</button>
 <a class='btn btn-secondary col-12 col-md-3 mt-3' href="<?=route("animais")?>">Novo</a>
+<a class="btn-back" href="<?=route('account')?>"></a>
 
 </form>
 
