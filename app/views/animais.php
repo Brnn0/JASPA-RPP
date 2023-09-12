@@ -1,38 +1,39 @@
 <?php include 'layout-top.php' ?>
 
 
+<div class="box">
+    
+    <form method='POST' action='<?=route('animais/salvar/'._v($data,"id"))?>'>
+    
+    <label class='col-md-6'>
+        <input type="text" class="form-control" name="nome" placeholder="Nome" value="<?=_v($data,"nome")?>" >
+    </label>
+    
+    <label class='col-md-2'>
+        <input type="text" class="form-control" name="foto" placeholder="Foto (URL)" value="<?=_v($data,"foto")?>" >
+    </label>
+    
+        <input type="text" class="form-control" name="ameaca" placeholder="Ameaça" value="<?=_v($data,"ameaca")?>" >
+    </label>
+    
+        <input type="text" class="form-control" name="info" placeholder="Info." value="<?=_v($data,"info")?>" >
+    </label>
+    
+        <input type="boolean" class="form-control" name="situacao" placeholder="Situação" value="<?=_v($data,"situacao")?>" >
+    
+        
+    </label>
+    
+    <button class='btn-account'>Salvar</button>
+    <a class='btn-account' href="<?=route("animais")?>">Novo</a>
+    
+    </form>
 
-<form method='POST' action='<?=route('animais/salvar/'._v($data,"id"))?>'>
+</div>
 
-<label class='col-md-6'>
-    Nome
-    <input type="text" class="form-control" name="nome" value="<?=_v($data,"nome")?>" >
-</label>
-
-<label class='col-md-2'>
-    Foto (Link da imagem)
-    <input type="text" class="form-control" name="foto" value="<?=_v($data,"foto")?>" >
-</label>
-
-    Ameaça
-    <input type="text" class="form-control" name="ameaca" value="<?=_v($data,"ameaca")?>" >
-</label>
-
-    Informações
-    <input type="text" class="form-control" name="info" value="<?=_v($data,"info")?>" >
-</label>
-
-    Situação
-    <input type="boolean" class="form-control" name="situacao" value="<?=_v($data,"situacao")?>" >
-</label>
-
-<button class='btn btn-primary col-12 col-md-3 mt-3'>Salvar</button>
-<a class='btn btn-secondary col-12 col-md-3 mt-3' href="<?=route("animais")?>">Novo</a>
 <a class="btn-back" href="<?=route('account')?>"></a>
 
-</form>
-
-<table class='table'>
+<table class='tableList'>
 
     <tr>
         <th>Editar</th>
@@ -62,5 +63,7 @@
 
     <?php endforeach; ?>
 </table>
+
+
 
 <?php include 'layout-bottom.php' ?>
