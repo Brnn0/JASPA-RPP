@@ -3,6 +3,11 @@
 namespace models;
 
 class Animal extends Model {
+
+     protected $table = "animais";
+     #nao esqueça da ID
+     protected $fields = ["id","nome", "foto", "ameaca", "info", "situacao"];
+
     
     public function findById($id){
         $stmt = $this->pdo->prepare("select * from animais where id = :id");
@@ -10,7 +15,29 @@ class Animal extends Model {
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
 
-    public function all(){
+    public function getGame(){
+
+        #Quando for pro mysql é RAND()
+        $stmt = $this->pdo->prepare("select * from animais where situacao = 0 ORDER BY RANDOM() limit 2");
+        $stmt->execute();
+        $list = [];
+        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+            array_push($list,$row);
+        }
+
+        $stmt = $this->pdo->prepare("select * from animais where situacao = 1 ORDER BY RANDOM() limit 1");
+        $stmt->execute();
+        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+            array_push($list,$row);
+        }
+        shuffle($list);
+
+        return $list;
+    }
+
+
+
+    /*public function all(){
         $stmt = $this->pdo->prepare("select * from animais");
         $stmt->execute();
         
@@ -55,7 +82,7 @@ class Animal extends Model {
     public function delete($id){
         $stmt = $this->pdo->prepare("DELETE FROM animais WHERE id = :id");
         return $stmt->execute(["id"=>$id]);
-    }
+    }*/
     
 }
 

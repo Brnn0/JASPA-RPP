@@ -11,6 +11,7 @@ body {
     background-image: url('../assets/img/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     padding: 40px 40px;
 }
@@ -69,14 +70,17 @@ body {
     background: transparent url('../assets/img/button/podium.png') no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
-    background-color: #D8AE42;
+    background-color: #d8ae42;
     border-color: #552606;
     cursor: pointer;
     width: 100px;
     height: 100px;
     border-radius: 100px;
     box-shadow: 0 5px #3b1b05;
-    float: left;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: inline-block;
     border-style: solid;
     border-width: 2px;
     
@@ -95,14 +99,17 @@ body {
     background: transparent url('../assets/img/button/profile.png') no-repeat center top;
     background-size: 66px;
     background-position: center 15px;
-    background-color: #D8AE42;
+    background-color: #d8ae42;
     border-color: #552606;
     cursor: pointer;
     width: 100px;
     height: 100px;
     border-radius: 100px;
     box-shadow: 0 5px #3b1b05;
-    float: right;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: inline-block;
     border-style: solid;
     border-width: 2px;
 }
@@ -142,19 +149,19 @@ a:link {
     font-family: 'Passero One', cursive;
     font-size: 40px;
     text-align: center;
-    margin-top: -1%;
+    margin-top: 1%;
     color: #ffffff;
     text-shadow: -2px -2px 0 #552606, 2px -2px 0 #552606, -2px 2px 0 #552606, 2px 2px 0 #552606;
 }
 
 .card-container {
     display: flex;
-    max-width: 900px;
+    justify-content: center;
     margin: 1px auto;
 }
 
-.game-label {
-    width: 100%;
+.card-label {
+    width: 300px;
 }
 
 .card-title {
@@ -162,12 +169,6 @@ a:link {
     padding: 10px;
     font-family: "Candara";
     font-size: 20px
-}
-
-.card-status {
-    text-align: center;
-    padding: 7px;
-    font-family: "Candara";
 }
 
 .animal-img {
@@ -180,8 +181,7 @@ a:link {
 .animal-photo {
     width: 200px;
     height: 200px;
-    border-top: 2px solid #552606;
-    border-bottom: 2px solid #552606;
+    border: 2px solid #552606;
 }
 
 .card-input-element {
@@ -415,10 +415,6 @@ span {
     color: red;
 }
 
-.container-cards {
-    display: flex;
-}
-
 .game-label {
     text-align: center;
 }
@@ -443,4 +439,8 @@ span {
 
 .tableList {
     background-color: white;
+}
+
+.radio-container {
+    display: flex;
 }

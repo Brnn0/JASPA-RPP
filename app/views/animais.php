@@ -18,11 +18,22 @@
     
         <input type="text" class="form-control" name="info" placeholder="Info." value="<?=_v($data,"info")?>" >
     </label>
-    
-        <input type="boolean" class="form-control" name="situacao" placeholder="Situação (True ou False)" value="<?=_v($data,"situacao")?>" >
-    
-        
-    </label>
+
+    <h1 class="titleSimple">
+        Ameaçado?
+    </h1>
+
+    <div class="radio-container">
+        <label>
+            Sim
+            <input type="radio" class="form-control" name="situacao" value="1" <?php _v($data,"situacao") == 1 ? print 'checked' : '' ?>  >
+        </label>
+
+        <label> 
+            Não
+            <input type="radio" class="form-control" name="situacao" value="0" <?php _v($data,"situacao") == 0 ? print 'checked' : '' ?>>
+        </label>
+    </div>
     
     <button class='btn-account'>Salvar</button>
     <a class='btn-account' href="<?=route("animais")?>">Novo</a>
