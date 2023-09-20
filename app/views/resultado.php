@@ -24,7 +24,7 @@
 
 <?php endforeach; ?>
 
-<button class="btn-send" href="<?=route('game')?>"></button>
+<a class="btn-next" href="<?=route('game')?>"></button>
 </div>
 
 

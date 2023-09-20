@@ -1,6 +1,5 @@
 <?php
 use models\Signup;
-use models\Usuario;
 
 class AutenticacaoController {
 
