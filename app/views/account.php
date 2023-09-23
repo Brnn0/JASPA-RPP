@@ -1,7 +1,15 @@
 <?php include 'layout-top.php' ?>
 
 <form class="box">
-        <h1 class="userName titleSimple">Nome Usuário</h1>
+
+        <p class="userName titleSimple">Bem vindo!</p>
+        <?php   
+            if (isset($_SESSION["signup"])) {
+                echo '<h1 class="userName titleSimple">' . $_SESSION["signup"]["nome"] . '</h1>';
+            } else {
+                echo '<h1 class="userName titleSimple"></h1>';
+            }
+        ?>
         <br>
 
         <a class="btn-link" href="<?=route('login')?>">Login</a>

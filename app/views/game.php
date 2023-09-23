@@ -1,10 +1,18 @@
 <?php include 'layout-top.php' ?>
 
 
-<h1 class="scoreTitle">Pontuação: <strong class="scoreNumber">0</strong></h1>
+<h1 class="scoreTitle">Pontuação: <strong class="scoreNumber"><?=$scoreAtual?></strong></h1>
+
+<!-- <?php
+if (isset($_SESSION["signup"])) {
+                echo '<h1 class="scoreTitle">Pontuação: <strong class="scoreNumber"><?=$scoreAtual?></strong></h1>';
+            } else {
+                echo '<h1 class="scoreTitle">Login para pontuar</strong></h1>';
+            }
+?> -->
+
+
 <h2 class="gameDesc">Adivinhe qual o animal ameaçado!</h2>
-
-
 
 <form method="POST" action="<?=route('game/resposta')?>">
 <div class="card-container">
@@ -18,6 +26,7 @@
                     <img class="animal-photo" src="<?=$animal['foto']?>" alt="Imagem">
                 </div>
             </div>
+            
     </label>
 
 <?php endforeach; ?>
@@ -26,7 +35,6 @@
 </div>
 </form>
 
-
-
+<a class="btn-back" style="left:15px" href="<?=route('home')?>"></a>
 
 <?php include 'layout-bottom.php' ?>

@@ -19,9 +19,9 @@
         <input type="text" class="form-control" name="info" placeholder="Info." value="<?=_v($data,"info")?>" >
     </label>
 
-    <h1 class="titleSimple">
+    <p class="titleSimple">
         Ameaçado?
-    </h1>
+    </p>
 
     <div class="radio-container">
         <label>

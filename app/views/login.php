@@ -23,7 +23,6 @@
     </label>
 
     <button class='btn-account'>Entrar</button>
-    <br> <br>
     <a class='redirect' href="<?=route("signup")?>">Registrar</a>
     </form>
 
