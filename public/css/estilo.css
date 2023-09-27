@@ -412,24 +412,6 @@ form img {
     border-width: 2px;
 }
 
-.btn-next {
-    background: transparent url('../assets/img/button/next.png') no-repeat center top;
-    background-size: 66px;
-    background-position: center 15px;
-    background-color: #d8ae42;
-    border-color: #552606;
-    cursor: pointer;
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    box-shadow: 0 5px #3b1b05;
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    display: inline-block;
-    border-style: solid;
-    border-width: 2px;
-}
 
 .game-label {
     text-align: center;
@@ -459,4 +441,89 @@ form img {
 
 .radio-container {
     display: flex;
+}
+
+.result-nav {
+    position: absolute;
+    display: flex;
+    bottom: 15px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+
+
+.btn-info {
+    background-color: #d8ae42;
+    font-family: 'Passero One', cursive;
+    color: #552606;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 60px;
+    width: 120px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.btn-home {
+    background-color: #d8ae42;
+    font-family: 'Passero One', cursive;
+    color: #552606;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 60px;
+    width: 120px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.btn-home:hover,
+.btn-info:hover {
+    color: yellow;
+}
+
+.btn-home:active,
+.btn-info:active {
+    box-shadow: 0 2px rgb(61, 51, 8);
+    transform: translateY(4px);
+}
+
+
+.btn-next {
+    background: transparent url('../assets/img/button/next.png') no-repeat center top;
+    background-size: 66px;
+    background-position: center 15px;
+    background-color: #d8ae42;
+    border-color: #552606;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0 5px #3b1b05;
+    position: absolute;
+    margin-bottom: 5%;
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.btn-next:hover,
+.btn-send:hover {
+    background-image: url('../assets/img/button/nextHover.png');
+}
+
+.btn-next:active,
+.btn-send:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
 }

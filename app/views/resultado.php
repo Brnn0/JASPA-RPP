@@ -19,7 +19,7 @@ if (isset($_SESSION["signup"])) {
 
 
 <div class="card-container">
-<?php foreach($dados as $animal): ?>
+    <?php foreach($dados as $animal): ?>
     <label class="game-label">
         <input type="radio" name="animal" class="card-input-element" value="<?=$animal['id']?>"/>
             <div class="card-input">
@@ -29,16 +29,19 @@ if (isset($_SESSION["signup"])) {
                 </div>
             </div>
     </label>
-
-<?php endforeach; ?>
-
-<!-- <?php if ($animalCerto != false): ?>
-    <a class="btn-next" href="<?=route('game/info/' . $animalCerto['id'] )?>" style='left:0px'></a>
-<?php endif; ?> -->
-
-<a class="btn-back" style="left:15px" href="<?=route('home')?>"></a>
-<a class="btn-next" href="<?=route('game')?>"></a>
+    <?php endforeach; ?>
 </div>
+
+
+<nav class="result-nav">
+    <div class="result-nav-items">
+        <?php if ($animalCerto != false): ?>
+            <a class="btn-info" href="<?=route('game/info/' . $animalCerto['id'] )?>">Info</a>
+        <?php endif; ?>
+        <a class="btn-next" href="<?=route('game')?>"></a>
+        <a class="btn-home" href="<?=route('home')?>">Início</a>
+    </div>
+</nav>
 
 
 <?php include 'layout-bottom.php' ?>
