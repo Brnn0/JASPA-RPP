@@ -25,6 +25,7 @@ if (isset($_SESSION["signup"])) {
                 <div class="animal-img">
                     <img class="animal-photo" src="<?=$animal['foto']?>" alt="Imagem">
                 </div>
+                <div class='card-status'>-----</div>
             </div>
             
     </label>

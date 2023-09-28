@@ -154,13 +154,12 @@ a:link {
 
 .card-container {
     display: flex;
-    justify-content: center;
-    margin: 1px auto;
+    max-width: 900px;
+    margin: 3% auto;
 }
 
 .card-label {
-    width: 250;
-    height: 250px;
+    width: 100%;
 }
 
 .card-title {
@@ -187,6 +186,12 @@ a:link {
     height: 100%;
     object-fit: cover;
     user-select: none;
+}
+
+.card-status {
+    text-align: center;
+    padding: 7px;
+    font-family: "Candara";
 }
 
 .card-input-element {

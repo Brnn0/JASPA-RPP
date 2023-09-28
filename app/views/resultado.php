@@ -27,7 +27,14 @@ if (isset($_SESSION["signup"])) {
                 <div class="animal-img">
                     <img class="animal-photo" src="<?=$animal['foto']?>" alt="Imagem">
                 </div>
-                <div class="card-status">------</div>
+
+                <?php if ($animal['situacao'] != false) {
+                    echo "<div class='card-status'>AMEAÇADO</div>";
+                } else {
+                    echo "<div class='card-status'>SEGURO</div>";
+                }
+                ?>
+
             </div>
     </label>
     <?php endforeach; ?>
@@ -39,8 +46,12 @@ if (isset($_SESSION["signup"])) {
         <?php if ($animalCerto != false): ?>
             <a class="btn-info" href="<?=route('game/info/' . $animalCerto['id'] )?>">Info</a>
             <a class="btn-next" href="<?=route('game')?>"></a>
+            <a class="btn-home" href="<?=route('home')?>">Início</a>
         <?php endif; ?>
-        <a class="btn-home" href="<?=route('home')?>">Início</a>
+
+        <?php if ($animalCerto == false):?>
+            <a class="btn-home" href="<?=route('home')?>">Fim!</a>
+        <?php endif; ?>
 
     </div>
 </nav>
