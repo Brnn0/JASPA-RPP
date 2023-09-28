@@ -164,21 +164,25 @@ a:link {
 }
 
 .card-title {
-    width: 250px;
     text-align: center;
     padding: 10px;
     font-family: "Candara";
     font-size: 18px
 }
 
-.animal-photo {
-    width: 200px;
-    height: 200px;
-    border: 2px solid #552606;
+.animal-img {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 180px;
+    border-top: 2px solid #552606;
+    border-bottom: 2px solid #552606;
     justify-content: center;
+    
 }
 
-.animal-img {
+.animal-photo {
+    margin: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -526,4 +530,46 @@ form img {
 .btn-send:active {
     box-shadow: 0 2px rgb(32, 27, 4);
     transform: translateY(4px);
+}
+
+/* INFORMAÇÕES */
+
+.info-container {
+    display: flex;
+    background: #d8ae42;
+    text-align: center;
+    border-radius: 24px;
+    outline: none;
+    border: 2px solid #301C06;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+}
+
+.title-info {
+    
+    font-family: 'Passero One', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #552606;
+}
+
+.title-status {
+    font-family: 'Passero One', cursive;
+    font-size: 25px;
+    text-align: center;
+    color: crimson;
+    text-shadow: -1px -1px 0 #552606, 1px -1px 0 #552606, -1px 1px 0 #552606, 1px 1px 0 #552606;
+}
+
+.status {
+    font-family: 'Passero One', cursive;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #552606, 1px -1px 0 #552606, -1px 1px 0 #552606, 1px 1px 0 #552606;
+}
+
+.info-img {
+    width: 100px;
+    height: 150px;
 }

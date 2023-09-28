@@ -27,19 +27,21 @@ if (isset($_SESSION["signup"])) {
                 <div class="animal-img">
                     <img class="animal-photo" src="<?=$animal['foto']?>" alt="Imagem">
                 </div>
+                <div class="card-status">------</div>
             </div>
     </label>
     <?php endforeach; ?>
 </div>
 
-
 <nav class="result-nav">
     <div class="result-nav-items">
+
         <?php if ($animalCerto != false): ?>
             <a class="btn-info" href="<?=route('game/info/' . $animalCerto['id'] )?>">Info</a>
+            <a class="btn-next" href="<?=route('game')?>"></a>
         <?php endif; ?>
-        <a class="btn-next" href="<?=route('game')?>"></a>
         <a class="btn-home" href="<?=route('home')?>">Início</a>
+
     </div>
 </nav>
 
