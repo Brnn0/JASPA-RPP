@@ -11,7 +11,7 @@
 <a id="btn_start" class="btn-start" href="<?=route('game')?>">Iniciar!</a>
 
 <nav>
-    <a id="btn_podium" class="btn-podium" href="#"></a>
+    <a id="btn_podium" class="btn-podium" href="<?=route('ranking')?>"></a>
 
     <a id="btn_profile" class="btn-profile" href="<?=route('account')?>"></a>
 </nav>

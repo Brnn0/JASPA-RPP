@@ -1,15 +1,13 @@
 <?php include 'layout-top.php' ?>
 
 
-<h1 class="scoreTitle">Pontuação: <strong class="scoreNumber"><?=$scoreAtual?></strong></h1>
+<!-- <h1 class="scoreTitle">Pontuação: <strong class="scoreNumber"><?=$scoreAtual?></strong></h1> -->
 
-<!-- <?php
-if (isset($_SESSION["signup"])) {
-                echo '<h1 class="scoreTitle">Pontuação: <strong class="scoreNumber"><?=$scoreAtual?></strong></h1>';
-            } else {
-                echo '<h1 class="scoreTitle">Login para pontuar</strong></h1>';
-            }
-?> -->
+<?php if (isset($_SESSION["signup"])): ?>
+    <h1 class="scoreTitle">Pontuação: <strong class="scoreNumber"><?=$scoreAtual?></strong></h1>
+<?php else: ?>
+    <h1 class="scoreTitle">Login para pontuar</h1>
+<?php endif; ?>
 
 <?php if ($resultado): ?>
     <h2 class="gameDesc game-correct">Animal certo!</h2>

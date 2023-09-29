@@ -13,7 +13,11 @@
         <br>
         
         <?php if (isset($_SESSION["signup"])): ?>
-            <a class="btn-link" href="<?=route('animais')?>">Animais</a>
+
+            <?php if ($_SESSION['signup']['tipo'] != 1): ?>
+                <a class="btn-link" href="<?=route('animais')?>">Animais</a>
+            <?php endif; ?>
+
             <a class="btn-link" href="<?=route('autenticacao/logout')?>">Logout</a>
         <?php else: ?>
             <a class="btn-link" href="<?=route('login')?>">Login</a>

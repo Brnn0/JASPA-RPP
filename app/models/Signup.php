@@ -49,5 +49,24 @@ class Signup extends Model {
         }
         return parent::update($id, $data);
     }
+
+    public function scores(){
+        $sql = "select *,sum(score) as total from usuarios
+        left join score on score.id_user = usuarios.id
+        group by usuarios.id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        if ($stmt == false){
+            $this->showError($sql);
+        }
+
+        $list = [];
+
+        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+            array_push($list,$row);
+        }
+
+        return $list;
+    }
     
 }

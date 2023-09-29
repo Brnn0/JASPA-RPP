@@ -489,6 +489,7 @@ form img {
     display: flex;
     justify-content: center;
     align-items: end;
+    position: relative;
 }
 
 .btn-info, .btn-home {

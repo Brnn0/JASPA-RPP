@@ -12,7 +12,10 @@ class GameController {
 		$_SESSION['animais'] = $dados;
 
 		$score = new Score();
-		$scoreAtual = $score->scoreById($_SESSION["signup"]['id']);
+		$scoreAtual = "";
+		if (isset($_SESSION["signup"])):
+			$scoreAtual = $score->scoreById($_SESSION["signup"]['id']);
+		endif;
 
 
 		render("game", ["dados"=>$dados, "scoreAtual"=>$scoreAtual]);
@@ -26,9 +29,8 @@ class GameController {
 
 	}
 
-	function resposta(){
 
-		
+	function responder(){
 		$score = new Score();
 		//ja busca no banco o animal pela id aí nao precisa fazer o foreach
 		$dados = $_SESSION['animais'];
@@ -51,8 +53,26 @@ class GameController {
 			$animalCerto = false;
 		}
 
-		$scoreAtual = $score->scoreById($_SESSION["signup"]['id']);
+		$_SESSION['animal'] = $animal;
+		$_SESSION['resultado'] = $resultado;
+		$_SESSION['animalCerto'] = $animalCerto;
 
+		redirect("game/resposta");
+	}
+
+
+	function resposta(){
+
+		$score = new Score();
+		$scoreAtual = "";
+		if (isset($_SESSION["signup"])):
+			$scoreAtual = $score->scoreById($_SESSION["signup"]['id']);
+		endif;
+
+		$dados = $_SESSION['animais'];
+		$animal = $_SESSION['animal'];
+		$resultado = $_SESSION['resultado'];
+		$animalCerto = $_SESSION['animalCerto'];
 		
 		render("resultado", ["dados"=>$dados, "resultado"=>$resultado, "scoreAtual"=>$scoreAtual, "animalCerto"=>$animalCerto]);
 
