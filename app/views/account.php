@@ -11,11 +11,15 @@
             }
         ?>
         <br>
+        
+        <?php if (isset($_SESSION["signup"])): ?>
+            <a class="btn-link" href="<?=route('animais')?>">Animais</a>
+            <a class="btn-link" href="<?=route('autenticacao/logout')?>">Logout</a>
+        <?php else: ?>
+            <a class="btn-link" href="<?=route('login')?>">Login</a>
+            <a class="btn-link" href="<?=route('signup')?>">Cadastrar</a>
+        <?php endif; ?>
 
-        <a class="btn-link" href="<?=route('login')?>">Login</a>
-        <a class="btn-link" href="<?=route('signup')?>">Cadastrar</a>
-        <a class="btn-link" href="<?=route('animais')?>">Animais</a>
-        <a class="btn-link" href="<?=route('autenticacao/logout')?>">Logout</a>
 </form>
 
 <nav>

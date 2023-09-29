@@ -12,9 +12,9 @@ if (isset($_SESSION["signup"])) {
 ?> -->
 
 <?php if ($resultado): ?>
-    <h2 class="gameDesc">Animal certo!</h2>
+    <h2 class="gameDesc game-correct">Animal certo!</h2>
 <?php else: ?>
-    <h2 class="gameDesc">Animal errado!</h2>
+    <h2 class="gameDesc game-wrong">Animal errado!</h2>
 <?php endif; ?>
 
 
@@ -22,7 +22,15 @@ if (isset($_SESSION["signup"])) {
     <?php foreach($dados as $animal): ?>
     <label class="game-label">
         <input type="radio" name="animal" class="card-input-element" value="<?=$animal['id']?>"/>
-            <div class="card-input">
+
+            <?php if ($animal['situacao'] != false) {
+                echo "<div class='card-input-correct'>";
+            } else {
+                echo "<div class='card-input-wrong'>";
+            }
+            ?>
+
+
                 <div class="card-title"><?=$animal['nome']?></div>
                 <div class="animal-img">
                     <img class="animal-photo" src="<?=$animal['foto']?>" alt="Imagem">
@@ -41,19 +49,15 @@ if (isset($_SESSION["signup"])) {
 </div>
 
 <nav class="result-nav">
-    <div class="result-nav-items">
 
-        <?php if ($animalCerto != false): ?>
-            <a class="btn-info" href="<?=route('game/info/' . $animalCerto['id'] )?>">Info</a>
-            <a class="btn-next" href="<?=route('game')?>"></a>
-            <a class="btn-home" href="<?=route('home')?>">Início</a>
-        <?php endif; ?>
+    <?php if ($animalCerto != false): ?>
+        <a class="btn-info" href="<?=route('game/info/' . $animalCerto['id'] )?>">Info</a>
+        <a class="btn-next" href="<?=route('game')?>"></a>
+        <a class="btn-home" href="<?=route('home')?>">Início</a>
+    <?php else: ?>
+        <a class="btn-home" href="<?=route('home')?>">Fim!</a>
+    <?php endif; ?>
 
-        <?php if ($animalCerto == false):?>
-            <a class="btn-home" href="<?=route('home')?>">Fim!</a>
-        <?php endif; ?>
-
-    </div>
 </nav>
 
 
