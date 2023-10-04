@@ -1,20 +1,21 @@
 <?php include 'layout-top.php' ?>
 
-<div class="info-container"> //flex
-    <div>
-        <div class="info-first-row">
-            <div class="info-img">
-                <img class="info-img" src="<?=$animal['foto']?>" alt="Imagem">
-            </div>
+<div class="info-container">
+    <div class="info-details">
+        <div class="info-img">
+            <img src="<?=$animal['foto']?>" alt="Imagem">
         </div>
-    
-        <div class="info-second-row">
-            <div class="info-title"><?=$animal['nome']?></div>
+
+        <div class="info-title">
+            <p class="info-name"><?=$animal['nome']?></p>
+        </div>
         
-            <div class="info-text">
-                <p class="title-status"> Ameaçado por: <strong class="status"><?=$animal['ameaca']?></strong></p>
-                <div class="card-info"><?=$animal['info']?></div>    
-            </div>
+    
+        <div class="info-card">
+            <p class="title-status">
+                Ameaçado por: <strong class="status"><?=$animal['ameaca']?></strong>
+            </p>
+            <p class="info-text"><?=$animal['info']?></p> 
         </div>
     </div>
     

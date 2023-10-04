@@ -7,4 +7,6 @@
 }
 ?>
 
+<a class="btn-back" href="<?=route('home')?>"></a>
+
 <?php include 'layout-bottom.php' ?>
