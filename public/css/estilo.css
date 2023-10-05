@@ -25,6 +25,31 @@ body {
 
 /* HOME */
 
+.copyright {
+    font-family: 'Passero One', cursive;
+    font-size: 15px;
+    position: absolute;
+    background-color: #D8AE42;
+    right: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 5px #351703;
+    border-color: #552606;
+    color: #351703;
+}
+
+.copyright:hover {
+    color: #FFE600;
+}
+
+.copyright:active {
+    box-shadow: 0 2px rgb(61, 51, 8);
+    transform: translateY(4px);
+}
+
 .titleHome {
     font-family: 'Passero One', cursive;
     font-size: 180px;

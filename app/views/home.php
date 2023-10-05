@@ -1,5 +1,7 @@
 <?php include 'layout-top.php' ?>
 
+<a class="copyright" href="https://www.freepik.com/free-vector/detailed-jungle-background_13859419.htm#query=tropical%20forest&position=36&from_view=keyword&track=ais">Fundo por Freepik</a>
+
 <h1 class="titleHome">
     J.A.S.P.A.
 </h1>
