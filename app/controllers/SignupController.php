@@ -1,5 +1,4 @@
 <?php
-use models\Usuario;
 use models\Signup;
 /**
 * Tutorial CRUD

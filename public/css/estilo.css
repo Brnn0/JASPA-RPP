@@ -27,18 +27,14 @@ body {
 
 .copyright {
     font-family: 'Passero One', cursive;
-    font-size: 15px;
+    font-size: 20px;
     position: absolute;
-    background-color: #D8AE42;
     right: 15px;
-    padding: 10px;
     border-radius: 15px;
     display: inline-block;
-    border-style: solid;
-    border-width: 2px;
-    box-shadow: 0 5px #351703;
-    border-color: #552606;
-    color: #351703;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #8a3d09, 1px -1px 0 #8a3d09, -1px 1px 0 #8a3d09, 1px 1px 0 #8a3d09, 2px 2px 3px #000000;
+
 }
 
 .copyright:hover {
@@ -46,7 +42,6 @@ body {
 }
 
 .copyright:active {
-    box-shadow: 0 2px rgb(61, 51, 8);
     transform: translateY(4px);
 }
 
@@ -353,14 +348,6 @@ form img {
     height: 100px;
     margin: 30px;
 }
-
-/* .icon {
-    src: url('../assets/img/icon.png');
-    background: white;
-    border-radius: 100%;
-    border: 2px solid #4d2c06;
-} */
-
 
 /* CADASTRO */
 
@@ -677,4 +664,41 @@ form img {
     margin: 30px 0;
 }
 
-/* --------------------------------*/
+/* RANKING*/
+
+.rank-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.img-trophy {
+    width: 60px;
+    height: 60px;
+}
+
+.rank-container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.rank-name {
+    font-family: 'Passero One', cursive;
+    font-size: 50px;
+    width: 150px;
+    text-align: center;
+    color: #FFE600;
+    text-shadow: -2px -2px 0 #8a3d09, 2px -2px 0 #8a3d09, -2px 2px 0 #8a3d09, 2px 2px 0 #8a3d09, 5px 5px 7px #000000;
+}
+
+.rank-box {
+    padding: 15px;
+    background-color: white;
+    width: 800px;
+    height: 400px;
+    margin-top: 20px;
+    font-family: 'Alatsi', sans-serif;
+    font-size: 20px;
+    align-items: center;
+}

@@ -57,30 +57,34 @@
     
 </div>
 
-<table class='tableList'>
+<?php if (isset($_SESSION["signup"])): ?>
 
-    <tr>
-        <th>Editar</th>
-        <th>Nome</th>
-        <th>Data de nascimento</th>
-        <th>Deletar</th>
-    </tr>
-
-    <?php foreach($lista as $item): ?>
+    <table class='tableList'>
 
         <tr>
-            <td>
-                <a href='<?=route("signup/index/{$item['id']}")?>'>Editar</a>
-            </td>
-            <td><?=$item['nome']?></td>
-            <td><?=$item['dataNascimento']?></td>
-            <td>
-                <a href='<?=route("signup/deletar/{$item['id']}")?>'>Deletar</a>
-            </td>
+            <th>Editar</th>
+            <th>Nome</th>
+            <th>Data de nascimento</th>
+            <th>Deletar</th>
         </tr>
 
-    <?php endforeach; ?>
-</table>
+        <?php foreach($lista as $item): ?>
+
+            <tr>
+                <td>
+                    <a href='<?=route("signup/index/{$item['id']}")?>'>Editar</a>
+                </td>
+                <td><?=$item['nome']?></td>
+                <td><?=$item['dataNascimento']?></td>
+                <td>
+                    <a href='<?=route("signup/deletar/{$item['id']}")?>'>Deletar</a>
+                </td>
+            </tr>
+
+        <?php endforeach; ?>
+    </table>
+
+<?php endif; ?>
 
 <a class="btn-back" href="<?=route('account')?>"></a>
 

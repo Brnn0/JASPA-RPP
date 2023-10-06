@@ -18,6 +18,10 @@
                 <a class="btn-link" href="<?=route('animais')?>">Animais</a>
             <?php endif; ?>
 
+            <?php if ($_SESSION['signup']['tipo'] != 1): ?>
+                <a class="btn-link" href="<?=route('signup')?>">Usuários</a>
+            <?php endif; ?>
+
             <a class="btn-link" href="<?=route('autenticacao/logout')?>">Logout</a>
         <?php else: ?>
             <a class="btn-link" href="<?=route('login')?>">Login</a>

@@ -53,7 +53,7 @@ class Signup extends Model {
     public function scores(){
         $sql = "SELECT *,sum(score) AS total FROM usuarios
         LEFT JOIN score ON score.id_user = usuarios.id
-        GROUP BY usuarios.id";
+        GROUP BY usuarios.id ORDER BY total DESC";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
         if ($stmt == false){
