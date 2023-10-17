@@ -83,5 +83,4 @@ class SignupController {
 
 		redirect("signup/index/");
 	}
-
 }

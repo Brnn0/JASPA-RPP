@@ -1,8 +1,16 @@
 <?php include 'layout-top.php' ?>
 
-<a class="copyright" href="https://www.freepik.com/free-vector/detailed-jungle-background_13859419.htm#query=tropical%20forest&position=36&from_view=keyword&track=ais">Fundo por Freepik</a>
+<?php   
+    if (isset($_SESSION["signup"])) {
+        echo '<p class="home-user">Logado como: ' . $_SESSION["signup"]["nome"] . '</p>';
+    } else {
+        echo '<p class="home-user"></p>';
+    }
+?>
 
-<h1 class="titleHome">
+<a class="copyright" href="<?=route('credits')?>">Créditos</a>
+
+<h1 class="titleHome text-pop-up-top">
     J.A.S.P.A.
 </h1>
 

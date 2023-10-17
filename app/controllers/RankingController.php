@@ -1,6 +1,4 @@
 <?php
-use models\Animal;
-use models\Score;
 use models\Signup;
 
 class RankingController {

@@ -1,8 +1,3 @@
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -25,11 +20,23 @@ body {
 
 /* HOME */
 
+.home-user {
+    font-family: 'Passero One', cursive;
+    font-size: 20px;
+    position: absolute;
+    left: 40px;
+    border-radius: 15px;
+    display: inline-block;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #8a3d09, 1px -1px 0 #8a3d09, -1px 1px 0 #8a3d09, 1px 1px 0 #8a3d09, 2px 2px 3px #000000;
+
+}
+
 .copyright {
     font-family: 'Passero One', cursive;
     font-size: 20px;
     position: absolute;
-    right: 15px;
+    right: 40px;
     border-radius: 15px;
     display: inline-block;
     color: #ffffff;
@@ -62,6 +69,7 @@ body {
     margin-top: -3.5%;
     color: #FFFDF9;
     text-shadow: -2px -2px 0 #369214, 2px -2px 0 #369214, -2px 2px 0 #369214, 2px 2px 0 #369214, 5px 5px 7px #000000;
+    animation: fadeIn 1s;
 }
 
 .btn-start {
@@ -157,13 +165,13 @@ a:link {
     font-size: 45px;
     text-align: center;
     color: #FCFF52;
-    text-shadow: -2px -2px 0 #552606, 2px -2px 0 #552606, -2px 2px 0 #552606, 2px 2px 0 #552606;
+    text-shadow: -2px -2px 0 #552606, 2px -2px 0 #552606, -2px 2px 0 #552606, 2px 2px 0 #552606, 4px 4px 6px #000000;
 }
 
 .scoreNumber {
     font-family: 'Coiny', cursive;
     color: white;
-    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+    text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000, 4px 4px 6px #000000;
 }
 
 
@@ -174,7 +182,7 @@ a:link {
     font-size: 40px;
     text-align: center;
     color: #ffffff;
-    text-shadow: -2px -2px 0 #552606, 2px -2px 0 #552606, -2px 2px 0 #552606, 2px 2px 0 #552606;
+    text-shadow: -2px -2px 0 #369214, 2px -2px 0 #369214, -2px 2px 0 #369214, 2px 2px 0 #369214, 4px 4px 6px #000000;
 }
 
 .game-correct {
@@ -182,7 +190,7 @@ a:link {
     font-size: 40px;
     text-align: center;
     color: #44ff5d;
-    text-shadow: -2px -2px 0 #044e01, 2px -2px 0 #044e01, -2px 2px 0 #044e01, 2px 2px 0 #044e01;
+    text-shadow: -2px -2px 0 #044e01, 2px -2px 0 #044e01, -2px 2px 0 #044e01, 2px 2px 0 #044e01, 4px 4px 6px #000000;
 }
 
 .game-wrong {
@@ -190,7 +198,7 @@ a:link {
     font-size: 40px;
     text-align: center;
     color: #ff7e7e;
-    text-shadow: -2px -2px 0 #700101, 2px -2px 0 #700101, -2px 2px 0 #700101, 2px 2px 0 #700101;
+    text-shadow: -2px -2px 0 #700101, 2px -2px 0 #700101, -2px 2px 0 #700101, 2px 2px 0 #700101, 4px 4px 6px #000000;
 }
 
 .card-container {
@@ -213,7 +221,7 @@ a:link {
 .animal-img {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 240px;
     height: 180px;
     border-top: 2px solid #552606;
     border-bottom: 2px solid #552606;
@@ -240,13 +248,27 @@ a:link {
     display: none;
 }
 
+@keyframes flipCard {
+    0% {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+}
+
 .card-input {
     background-color: #eece65;
     border: 2px solid #552606;
     box-shadow: 3px 3px #094b0e;
     margin: 30px;
     padding: 00px;
-    animation: fadeIn 1s;
+    animation: flipCard 0.5s;
 }
 
 
@@ -276,6 +298,10 @@ a:link {
     transform: translateY(-4px);
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
 
 /* CONTA */
 
@@ -295,6 +321,62 @@ a:link {
     box-shadow: 0 5px #552606;
 }
 
+.btn-animal {
+    background-color: #ffffff;
+    font-family: 'Passero One', cursive;
+    color: #552606;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 25px;
+    border-radius: 24px;
+    margin: 5% auto;
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.btn-animal:checked{
+    color: #44ff5d;
+}
+
+.btn-animal:active {
+    box-shadow: 0 2px rgb(32, 27, 4);
+    transform: translateY(4px);
+}
+
+.btn-animal-input:checked {
+    color: #369214;
+}
+
+.animal-box {
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d8ae42;
+    text-align: center;
+    border-radius: 24px;
+    outline: none;
+    border: 2px solid #301C06;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-animal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
 .btn-account {
     background-color: #f1df35;
     font-family: 'Passero One', cursive;
@@ -307,7 +389,7 @@ a:link {
     font-size: 30px;
     border-radius: 60px;
     width: 200px;
-    margin: 5% auto;
+    margin: 10px 0;
     display: inline-block;
     border-style: solid;
     border-width: 2px;
@@ -341,12 +423,6 @@ a:link {
     box-shadow: 0 2px rgb(61, 51, 8);
     transform: translateY(4px);
     color: #fdae03;
-}
-
-form img {
-    width: 100px;
-    height: 100px;
-    margin: 30px;
 }
 
 /* CADASTRO */
@@ -407,13 +483,6 @@ form img {
     text-align: center;
     margin-top: -4.5%;
 }
-
-form img {
-    width: 100px;
-    height: 100px;
-    margin: 30px;
-}
-
 
 /* LOGIN */
 
@@ -489,8 +558,7 @@ form img {
     padding: 5px;
     font-size: 25px;
     border-radius: 60px;
-    width: 120px;
-    margin: 5% auto;
+    width: 100px;
     display: inline-block;
     border-style: solid;
     border-width: 2px;
@@ -498,6 +566,17 @@ form img {
 
 .tableList {
     background-color: white;
+    border-collapse: collapse;
+}
+
+.tableList > tr, th, td {
+    border: 1px solid black;
+}
+
+.animal-list {
+    width: 100px;
+    position: absolute;
+    left: 50px;
 }
 
 .radio-container {
@@ -587,6 +666,8 @@ form img {
     align-self: center;
     width: 400px;
     height: 300px;
+    animation: fadeIn 0.5s;
+
 
     border: 5px solid #eece65;
     border-radius: 20px;
@@ -597,11 +678,11 @@ form img {
 }
 
 .info-img > img {    
-    border: 2px solid #4d2c06;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     border-radius: 15px;
+    border: 2px solid #4d2c06;
 }
 /* --------------------------------*/
 
@@ -618,6 +699,7 @@ form img {
     grid-row-start: 2;
     height: 400px;
     justify-self: center;
+    animation: fadeIn 0.5s;
 }
 
 .info-title {
@@ -637,6 +719,7 @@ form img {
     text-align: center;
     background-color: #f1df35;
     border-radius: 15px;
+    animation: openName 0.5s;
 }
 
 .title-status {
@@ -669,7 +752,6 @@ form img {
 .rank-title {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
 }
 
 .img-trophy {
@@ -677,28 +759,180 @@ form img {
     height: 60px;
 }
 
+.rank-name {
+    font-family: 'Passero One', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: #fff131;
+    text-shadow: -2px -2px 0 #8a3d09, 2px -2px 0 #8a3d09, -2px 2px 0 #8a3d09, 2px 2px 0 #8a3d09, 5px 5px 7px #000000;
+    animation: openName 0.5s;
+}
+
+@keyframes openName {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
 .rank-container {
     align-items: center;
     justify-content: center;
     display: flex;
-}
-
-.rank-name {
-    font-family: 'Passero One', cursive;
-    font-size: 50px;
-    width: 150px;
-    text-align: center;
-    color: #FFE600;
-    text-shadow: -2px -2px 0 #8a3d09, 2px -2px 0 #8a3d09, -2px 2px 0 #8a3d09, 2px 2px 0 #8a3d09, 5px 5px 7px #000000;
+    animation: flipCard 0.5s;
 }
 
 .rank-box {
-    padding: 15px;
-    background-color: white;
-    width: 800px;
-    height: 400px;
-    margin-top: 20px;
+    color: #552606;
+    display: flex;
+    padding: 30px;
+    background-color: #eece65;
+    width: 500px;
+    height: 450px;
     font-family: 'Alatsi', sans-serif;
-    font-size: 20px;
-    align-items: center;
+    font-size: 25px;
+    justify-content: center;
+    text-align: justify;
+    outline: none;
+    border: 2px solid #301C06;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    border-radius: 15px;
+}
+
+.img-star-lefttop {        
+    width: 50px;
+    height: 50px;
+    transform: scaleX(-1);
+    translate: 70px -230px;
+}
+
+.img-star-leftbot {        
+    width: 50px;
+    height: 50px;
+    transform: scaleX(-1);
+    translate: 20px 220px;
+}
+
+.img-star-righttop {
+    width: 50px;
+    height: 50px;
+    translate: -20px -230px;
+}
+
+.img-star-rightbot {
+    width: 50px;
+    height: 50px;
+    translate: -70px 220px;
+}
+
+
+.limit-text {
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rank-table {
+    border-collapse: collapse;
+    height: 35px;
+}
+
+.rank-th-position, .rank-th-user, .rank-th-score {
+    border-bottom: 3px solid #552606;
+    height: 35px;
+    text-align: center;
+}
+
+.rank-th-position {
+    border-right: 3px solid #552606;
+    width: 120px;
+}
+
+.rank-th-user {
+    border: 0px 3px solid #552606;
+    width: 200px;
+}
+
+.rank-th-score {
+    border-left: 3px solid #552606;
+    width: 120px;
+}
+
+.rank-td {
+    text-align: center;
+    height: 35px;
+}
+
+.rank-tr:nth-child(even) { 
+    background-color: #fdd243; 
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-10-6 14:27:43
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+ 
+ /**
+ * ----------------------------------------
+ * animation text-pop-up-top
+ * ----------------------------------------
+ */
+
+ .text-pop-up-top {
+     -webkit-animation: text-pop-up-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+             animation: text-pop-up-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+ }
+
+ /* --------------------------------------- */
+
+ @-webkit-keyframes text-pop-up-top {
+0% {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  text-shadow: none;
+}
+100% {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  text-shadow: 0 1px 0 #8a3d09, 0 2px 0 #8a3d09, 0 3px 0 #8a3d09, 0 4px 0 #8a3d09, 0 5px 0 #8a3d09, 0 6px 0 #8a3d09, 0 7px 0 #8a3d09, 0 8px 0 #8a3d09, 0 9px 0 #8a3d09, 0 30px 10px rgba(0, 0, 0, 0.3);
+}
+}
+@keyframes text-pop-up-top {
+0% {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  text-shadow: none;
+}
+100% {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  text-shadow: 0 1px 0 #8a3d09, 0 2px 0 #8a3d09, 0 3px 0 #8a3d09, 0 4px 0 #8a3d09, 0 5px 0 #8a3d09, 0 6px 0 #8a3d09, 0 7px 0 #8a3d09, 0 8px 0 #8a3d09, 0 9px 0 #8a3d09, 0 30px 10px rgba(0, 0, 0, 0.3);
+}
 }

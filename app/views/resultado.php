@@ -1,7 +1,7 @@
 <?php include 'layout-top.php' ?>
 
 
-<!-- <h1 class="scoreTitle">Pontuação: <strong class="scoreNumber"><?=$scoreAtual?></strong></h1> -->
+
 
 <?php if (isset($_SESSION["signup"])): ?>
     <h1 class="scoreTitle">Pontuação: <strong class="scoreNumber"><?=$scoreAtual?></strong></h1>
@@ -11,6 +11,7 @@
 
 <?php if ($resultado): ?>
     <h2 class="gameDesc game-correct">Animal certo!</h2>
+    <audio autoplay src="public\assets\audio\audio-correct.mp3"></audio>
 <?php else: ?>
     <h2 class="gameDesc game-wrong">Animal errado!</h2>
 <?php endif; ?>
@@ -20,15 +21,12 @@
     <?php foreach($dados as $animal): ?>
     <label class="game-label">
         <input type="radio" name="animal" class="card-input-element" value="<?=$animal['id']?>"/>
-
             <?php if ($animal['situacao'] != false) {
                 echo "<div class='card-input-correct'>";
             } else {
                 echo "<div class='card-input-wrong'>";
             }
             ?>
-
-
                 <div class="card-title"><?=$animal['nome']?></div>
                 <div class="animal-img">
                     <img class="animal-photo" src="<?=$animal['foto']?>" alt="Imagem">
