@@ -49,11 +49,17 @@ textarea::placeholder {
     font-size: 20px;
     position: absolute;
     left: 40px;
-    border-radius: 15px;
-    display: inline-block;
     color: #ffffff;
     text-shadow: -1px -1px 0 #8a3d09, 1px -1px 0 #8a3d09, -1px 1px 0 #8a3d09, 1px 1px 0 #8a3d09, 2px 2px 3px #000000;
 
+}
+
+
+.white-link {
+    font-family: 'Passero One', cursive;
+    font-size: 25px;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #8a3d09, 1px -1px 0 #8a3d09, -1px 1px 0 #8a3d09, 1px 1px 0 #8a3d09, 2px 2px 3px #000000;
 }
 
 .copyright {
@@ -61,18 +67,15 @@ textarea::placeholder {
     font-size: 20px;
     position: absolute;
     right: 40px;
-    border-radius: 15px;
-    display: inline-block;
     color: #ffffff;
     text-shadow: -1px -1px 0 #8a3d09, 1px -1px 0 #8a3d09, -1px 1px 0 #8a3d09, 1px 1px 0 #8a3d09, 2px 2px 3px #000000;
-
 }
 
-.copyright:hover {
+.copyright:hover, .white-link:hover {
     color: #FFE600;
 }
 
-.copyright:active {
+.copyright:active, .white-link:hover {
     transform: translateY(4px);
 }
 
@@ -363,7 +366,6 @@ a:link {
 }
 
 .credit-box {
-    width: 800px;
     padding: 40px;
     position: absolute;
     top: 50%;
@@ -376,6 +378,10 @@ a:link {
     border: 2px solid #301C06;
     border-color: #552606;
     box-shadow: 0 5px #552606;
+}
+
+.credit-info {
+    text-align: start;
 }
 
 .btn-animal {
@@ -546,7 +552,20 @@ a:link {
 .titleSimple {
     font-family: 'Passero One', cursive;
     font-size: 40px;
+    color: #552606;
+}
+
+.titleSimple-credit {
+    margin-bottom: 20px; 
     text-align: center;
+    font-family: 'Passero One', cursive;
+    font-size: 30px;
+    color: #552606;
+}
+
+.p-credit {
+    font-family: 'Alatsi', sans-serif; 
+    font-size: 20px; 
     color: #552606;
 }
 

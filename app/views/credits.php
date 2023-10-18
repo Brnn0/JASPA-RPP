@@ -1,20 +1,32 @@
 <?php include 'layout-top.php' ?>
 
 <div class="credit-box">
-
-    <a class="" href="https://www.freepik.com/free-vector/detailed-jungle-background_13859419.htm#query=tropical%20forest&position=36&from_view=keyword&track=ais">Fundo por: Freepik</a>
-    <br>
-    <a class="" href="https://www.flaticon.com/free-icons/star">Estrelas por: Flaticon</a>
-    <br>
-    <p>
-        Autores: Bruno Joseph Fagundes Oliveira <br>
-                Weverson Juan Silva Oliveira
+    <div class="credit-info">
+        <h1 class="titleSimple-credit">Créditos:</h1>
+        <p class="p-credit">
+            <strong class="titleSimple-credit">Autores:</strong> 
+            <br>
+            Bruno Joseph Fagundes Oliveira
+            <br>
+            Weverson Juan Silva Oliveira
+            <br>
+            <strong class="titleSimple-credit">Turma:</strong>
+            <br>
+            INFO4M
+            <br>
+            <strong class="titleSimple-credit">Orientador:</strong>
+            <br>
+            Alan Klinger Sousa Alves
+        </p>
+        
+        <strong class="titleSimple-credit">Fundo por:</strong>
+        <a class="white-link" style="font-size: 25px" href="https://www.freepik.com/free-vector/detailed-jungle-background_13859419.htm">  Freepik</a>
         <br>
-        Turma: INFO4M
-        <br>
-        Orientador: Alan Klinger Sousa Alves
-    </p>
 
+        <strong class="titleSimple-credit">Estrelas por:</strong>
+        <a class="white-link" style="font-size: 25px" href="https://icons8.com/">Icons8</a>
+    </div>
+    
     
 </div>
 
