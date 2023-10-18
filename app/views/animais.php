@@ -54,7 +54,6 @@
             <?php foreach($lista as $item): ?>
         
                 <tr>
-                <th class="table-td">Deletar</th>
                     <td class="table-td">
                         <a href='<?=route("animais/index/{$item['id']}")?>'>Editar</a>
                     </td>
