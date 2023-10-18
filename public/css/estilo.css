@@ -242,7 +242,11 @@ a:link {
     text-align: center;
     padding: 10px;
     font-family: "Candara";
-    font-size: 18px
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
 }
 
 .animal-img {
