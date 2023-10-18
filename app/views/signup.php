@@ -15,19 +15,12 @@
 
     <form method='POST' action='<?=route('signup/salvar')?>'>
 
-    <label class='col-md-6'>
-
         <input type="text" class="form-control <?=hasError("nome","is-invalid")?>" name="nome" value="" placeholder="Nome"> 
         <div class='invalid-feedback'><?=getValidationError("nome") ?></div>
-    </label>
 
-    <label class='col-md-6'>
         <input type="email" class="form-control" name="email" placeholder="E-Mail" value="<?=old("email", _v($data,"email"))?>" >
-    </label>
 
-    <label class='col-md-6'>
         <input type="password" class="form-control" name="senha" placeholder="Senha" value="" >
-    </label>
 
 
     <label class='col-md-4' style='position:relative'>
@@ -38,8 +31,6 @@
         <div class="invalid-tooltip"><?=getValidationError("dataNascimento") ?></div>
     </label>
 
-    <label class='col-md-6'>
-
         <select name="tipo" class="form-control">
             <?php
             foreach($tipos as $k=>$tipo){
@@ -48,7 +39,6 @@
             }
             ?>
         </select>
-    </label>
 
     <button class='btn-account'>Registrar</button>
     <a class='redirect' href="<?=route("login")?>">logar</a>
@@ -59,30 +49,36 @@
 
 <?php if (isset($_SESSION["signup"])): ?>
 
-    <table class='tableList'>
 
-        <tr>
-            <th>Editar</th>
-            <th>Nome</th>
-            <th>Data de nascimento</th>
-            <th>Deletar</th>
-        </tr>
+    <div class="scroll-table user-list">
 
-        <?php foreach($lista as $item): ?>
+        <table class='tableList'>
 
-            <tr>
-                <td>
-                    <a href='<?=route("signup/index/{$item['id']}")?>'>Editar</a>
-                </td>
-                <td><?=$item['nome']?></td>
-                <td><?=$item['dataNascimento']?></td>
-                <td>
-                    <a href='<?=route("signup/deletar/{$item['id']}")?>'>Deletar</a>
-                </td>
-            </tr>
+                <tr class="table-tr">
+                    <th class="table-th">Editar</th>
+                    <th class="table-th">Nome</th>
+                    <th class="table-th">Data de nascimento</th>
+                    <th class="table-th">Deletar</th>
+                </tr>
 
-        <?php endforeach; ?>
-    </table>
+                <?php foreach($lista as $item): ?>
+
+                    <tr class="table-tr">
+                        <td class="table-td">
+                            <a href='<?=route("signup/index/{$item['id']}")?>'>Editar</a>
+                        </td>
+                        <td class="table-td"><?=$item['nome']?></td>
+                        <td class="table-td"><?=$item['dataNascimento']?></td>
+                        <td class="table-td">
+                            <a href='<?=route("signup/deletar/{$item['id']}")?>'>Deletar</a>
+                        </td>
+                    </tr>
+
+                <?php endforeach; ?>
+            </table>
+
+    </div>
+    
 
 <?php endif; ?>
 

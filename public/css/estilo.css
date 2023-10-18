@@ -16,7 +16,31 @@ body {
     padding: 40px 40px;
 }
 
+textarea {
+    resize: none;
+}
 
+textarea::placeholder {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Passero One', cursive;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+   background: #ffffff; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffea73; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffe344; 
+}
 
 /* HOME */
 
@@ -321,8 +345,41 @@ a:link {
     box-shadow: 0 5px #552606;
 }
 
+.animal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 550px;
+    padding: 30px;
+    background: #d8ae42;
+    text-align: center;
+    border-radius: 24px;
+    outline: none;
+    border: 2px solid #301C06;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+}
+
+.credit-box {
+    width: 800px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d8ae42;
+    text-align: center;
+    border-radius: 24px;
+    outline: none;
+    border: 2px solid #301C06;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+}
+
 .btn-animal {
-    background-color: #ffffff;
+    background-color: #f1df35;
     font-family: 'Passero One', cursive;
     color: #552606;
     border-color: #552606;
@@ -351,23 +408,12 @@ a:link {
     color: #369214;
 }
 
-.animal-box {
-    width: 300px;
-    padding: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #d8ae42;
-    text-align: center;
-    border-radius: 24px;
-    outline: none;
-    border: 2px solid #301C06;
-    border-color: #552606;
-    box-shadow: 0 5px #552606;
-    justify-content: center;
+.animal-cad-container {
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
+
 
 .btn-animal-container {
     display: flex;
@@ -466,7 +512,6 @@ a:link {
 }
 
 .form-control {
-    border: 0;
     background: #ffffff;
     display: block;
     margin: 20px auto;
@@ -474,7 +519,6 @@ a:link {
     border: 2px solid #4d2c06;
     padding: 5px 10px;
     width: 200px;
-    outline: none;
     color: #301C06;
     border-radius: 8px;
     transition: 0.25s;
@@ -484,7 +528,20 @@ a:link {
     margin-top: -4.5%;
 }
 
-/* LOGIN */
+.form-control-info {
+    background: #ffffff;
+    display: block;
+    border: 2px solid #4d2c06;
+    padding: 5px 10px;
+    width: 235px;
+    height: 150px;
+    color: #301C06;
+    border-radius: 8px;
+    font-family: 'Alatsi', sans-serif; 
+    font-size: 20px;
+    margin-top: -4.5%;
+    white-space: pre-wrap; 
+}
 
 .titleSimple {
     font-family: 'Passero One', cursive;
@@ -564,18 +621,18 @@ a:link {
     border-width: 2px;
 }
 
-.tableList {
-    background-color: white;
-    border-collapse: collapse;
+.animal-table {
+    position: absolute;
+    right: 80px;
 }
 
-.tableList > tr, th, td {
-    border: 1px solid black;
+.user-list {
+    position: absolute;
+    right: 80px;
 }
 
 .animal-list {
     width: 100px;
-    position: absolute;
     left: 50px;
 }
 
@@ -875,9 +932,21 @@ a:link {
     background-color: #fdd243; 
 }
 
+.scroll-table {
+    max-height: 450px;
+    overflow-y: auto;
+    direction: ltr;
+}
 
+.tableList {
+    background-color: white;
+    border-collapse: collapse;
+    direction: ltr;
+}
 
-
+.table-th, .table-td, .table-tr {
+    border: 1px solid black;
+}
 
 
 
