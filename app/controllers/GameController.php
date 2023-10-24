@@ -5,11 +5,17 @@ use models\Score;
 class GameController {
 
 	function index(){
+		
+		if (isset($_GET['erro'])){
+			$dados = $_SESSION['animais'];
+		} else {
+			//$dados = $this->dadosDoBanco;
+			$model = new Animal();
+			$dados = $model->getGame();
+			$_SESSION['animais'] = $dados;
+		}
 
-		//$dados = $this->dadosDoBanco;
-		$model = new Animal();
-		$dados = $model->getGame();
-		$_SESSION['animais'] = $dados;
+		
 
 		$score = new Score();
 		$scoreAtual = "";
@@ -31,12 +37,16 @@ class GameController {
 
 
 	function responder(){
+		
+		if (!isset($_POST['animal'])){
+			header('Location: ' . str_replace("?erro=1","",$_SERVER['HTTP_REFERER']) . "?erro=1");
+			die();
+		}
+		
 		$score = new Score();
-		//ja busca no banco o animal pela id aí nao precisa fazer o foreach
 		$dados = $_SESSION['animais'];
 
 		$animal = null;
-		//busca o animal que foi selecionado
 		foreach($dados as $anim){
 			if ($anim['id'] == $_POST['animal']){
 				$animal = $anim;

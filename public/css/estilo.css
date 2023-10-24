@@ -26,20 +26,27 @@ textarea::placeholder {
     font-family: 'Passero One', cursive;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-   background: #ffffff; 
+   background: #ffffff;
+   border: 1px solid black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffea73; 
+  background: #e0a432; 
+  border: 1px solid black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffe344; 
+  background: #f8bf55;
+  border: 1px solid black;
 }
 
 /* HOME */
@@ -181,10 +188,6 @@ textarea::placeholder {
 .btn-profile:active {
     box-shadow: 0 2px rgb(32, 27, 4);
     transform: translateY(4px);
-}
-
-a:link {
-    text-decoration: none;
 }
 
 .scoreTitle {
@@ -336,10 +339,69 @@ a:link {
 
 /* CONTA */
 
+.animal-box-container, .user-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-table {
+    max-height: 450px;
+    overflow-y: auto;
+    direction: ltr;
+}
+
+.tableList {
+    border-collapse: collapse;
+    direction: ltr;
+}
+
+.table-th-edit, .table-th-name, .table-th-treat {
+    border-right: 3px solid #552606;
+    border-bottom: 3px solid #552606;
+    
+}
+
+.table-th-delet {
+    border-left: 3px solid #552606;
+    border-bottom: 3px solid #552606;;
+}
+
+.table-th-edit, .table-th-name, .table-th-treat, .table-th-delet {
+    width: 200px;
+    height: 35px;
+    text-align: center;
+}
+
+/* .table-tr:nth-child(even) { 
+    background-color: #fdd243; 
+} */
+
+.table-td, .table-tr {
+    height: 35px;
+    text-align: center;
+}
+
+
+.animal-table, .user-table {
+    margin-left: 30px;
+    padding: 5px;
+    font-family: 'Alatsi', sans-serif;
+    font-size: 20px;
+    animation: flipCard 0.5s;
+    background-color: #eece65;
+    width: 450px;
+    height: 450px;
+    border: 2px solid #301C06;
+    border-color: #552606;
+    box-shadow: 0 5px #552606;
+    border-radius: 15px;
+}
+
 .box {
+    position: absolute;
     width: 300px;
     padding: 40px;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -352,13 +414,8 @@ a:link {
     box-shadow: 0 5px #552606;
 }
 
-.animal-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 550px;
+.animal-box, .user-box {
+    display: flex;
     padding: 30px;
     background: #d8ae42;
     text-align: center;
@@ -427,10 +484,13 @@ a:link {
 
 .btn-animal-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
-    
+}
+
+.btn-user-container{
+    display: block;
 }
 
 .btn-account {
@@ -642,21 +702,6 @@ a:link {
     display: inline-block;
     border-style: solid;
     border-width: 2px;
-}
-
-.animal-table {
-    position: absolute;
-    right: 80px;
-}
-
-.user-list {
-    position: absolute;
-    right: 80px;
-}
-
-.animal-list {
-    width: 100px;
-    left: 50px;
 }
 
 .radio-container {
@@ -955,21 +1000,6 @@ a:link {
     background-color: #fdd243; 
 }
 
-.scroll-table {
-    max-height: 450px;
-    overflow-y: auto;
-    direction: ltr;
-}
-
-.tableList {
-    background-color: white;
-    border-collapse: collapse;
-    direction: ltr;
-}
-
-.table-th, .table-td, .table-tr {
-    border: 1px solid black;
-}
 
 
 

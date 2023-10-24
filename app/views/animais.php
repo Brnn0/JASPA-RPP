@@ -1,6 +1,6 @@
 <?php include 'layout-top.php' ?>
 
-<div >
+<div class="animal-box-container">
 
     <div class="animal-box">
         
@@ -31,43 +31,43 @@
             <div class="btn-animal-container">
                 <button class='redirect'>Salvar</button>
                 <a class='redirect' style="margin-bottom: 0;" href="<?=route("animais")?>">Novo</a>
-
             </div>
         
         </form>
 
+        <div class="scroll-table animal-table">
+            
+            <table class='tableList animal-list'>
+            
+                <tr class="table-tr">
+                    <th class="table-th-edit">Editar</th>
+                    <th class="table-th-name">Nome</th>
+                    <th class="table-th-treat">Situação</th>
+                    <th class="table-th-delet">Deletar</th>
+                </tr>
+            
+                <?php foreach($lista as $item): ?>
+            
+                    <tr>
+                        <td class="table-td">
+                            <a href='<?=route("animais/index/{$item['id']}")?>'>Editar</a>
+                        </td>
+                        <td class="table-td limit-text"><?=$item['nome']?></td>
+                        <td class="table-td limit-text"><?=$item['situacao']?></td>
+                        <td class="table-td">
+                            <a href='<?=route("animais/deletar/{$item['id']}")?>'>Deletar</a>
+                        </td>
+                    </tr>
+            
+                <?php endforeach; ?>
+            </table>
+    
+        </div>
+
     </div>
+
 
     <a class="btn-back" href="<?=route('account')?>"></a>
-
-    <div class="scroll-table animal-table">
-        
-        <table class='tableList animal-list'>
-        
-            <tr class="table-tr">
-                <th class="table-th">Editar</th>
-                <th class="table-th">Nome</th>
-                <th class="table-th">Situação</th>
-                <th class="table-th">Deletar</th>
-            </tr>
-        
-            <?php foreach($lista as $item): ?>
-        
-                <tr>
-                    <td class="table-td">
-                        <a href='<?=route("animais/index/{$item['id']}")?>'>Editar</a>
-                    </td>
-                    <td class="table-td limit-text"><?=$item['nome']?></td>
-                    <td class="table-td limit-text"><?=$item['situacao']?></td>
-                    <td class="table-td">
-                        <a href='<?=route("animais/deletar/{$item['id']}")?>'>Deletar</a>
-                    </td>
-                </tr>
-        
-            <?php endforeach; ?>
-        </table>
-
-    </div>
 
 </div>
 

@@ -12,13 +12,15 @@
         ?>
         <br>
         
-        <?php if (isset($_SESSION["signup"])): ?>
+        <?php 
+        use models\Signup;
+        if (isset($_SESSION["signup"])): ?>
 
-            <?php if ($_SESSION['signup']['tipo'] != 1): ?>
+            <?php if (isset($_SESSION["signup"]) && $_SESSION['signup']['tipo'] == Signup::ADMIN_USER): ?>
                 <a class="btn-link" href="<?=route('animais')?>">Animais</a>
             <?php endif; ?>
 
-            <?php if ($_SESSION['signup']['tipo'] != 1): ?>
+            <?php if (isset($_SESSION["signup"]) && $_SESSION['signup']['tipo'] == Signup::ADMIN_USER): ?>
                 <a class="btn-link" href="<?=route('signup')?>">Usuários</a>
             <?php endif; ?>
 
