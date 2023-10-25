@@ -18,14 +18,14 @@ class Animal extends Model {
     public function getGame(){
 
         #Quando for pro mysql é RAND()
-        $stmt = $this->pdo->prepare("select * from animais where situacao = 0 ORDER BY RANDOM() limit 2");
+        $stmt = $this->pdo->prepare("select * from animais where situacao = 0 ORDER BY RAND() limit 2");
         $stmt->execute();
         $list = [];
         while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
             array_push($list,$row);
         }
 
-        $stmt = $this->pdo->prepare("select * from animais where situacao = 1 ORDER BY RANDOM() limit 1");
+        $stmt = $this->pdo->prepare("select * from animais where situacao = 1 ORDER BY RAND() limit 1");
         $stmt->execute();
         while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
             array_push($list,$row);
