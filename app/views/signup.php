@@ -4,21 +4,17 @@ include 'layout-top.php' ?>
 
 <div class="user-box-container">
 
-    <div class="user-box">
-        
-
-        <br>
-
     <?php
-
-    if (getFlash("success")){
-        print "<div class='alert alert-success' role='alert'>".getFlash("success")."</div>";
-    } else
-    if (getFlash("error")){
-        print "<div class='alert alert-danger' role='alert'>".getFlash("error")."</div>";
-    }
-
+        if (getFlash("success")){
+            print "<div class='alert alert-success' role='alert'>".getFlash("success")."</div>";
+        } else
+        if (getFlash("error")){
+            print "<div class='alert alert-danger' role='alert'>".getFlash("error")."</div>";
+        }
     ?>
+
+    <div class="user-box">
+        <br>
 
     <?php if (isset($msg) && $msg != "") : ?>
         <div class="alert alert-danger" role="alert">
@@ -97,13 +93,9 @@ include 'layout-top.php' ?>
         <?php endif; ?>
     
     </div>
-
-
-
     
+    <a class="btn-back" href="<?=route('account')?>"></a>
 
 </div>
-
-<a class="btn-back" href="<?=route('account')?>"></a>
 
 <?php include 'layout-bottom.php' ?>

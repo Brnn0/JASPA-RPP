@@ -30,6 +30,21 @@ a:link {
     text-decoration: none;
 }
 
+.alert {
+    display: flex;
+    position: absolute;
+    font-size: 20px;
+    top: 20px;
+    justify-content: center;
+    font-family: 'Passero One', cursive;
+    background-color: #f1df35;
+    color: #552606;
+    border: 2px solid #552606;
+    padding: 10px;
+    box-shadow: 0 3px #552606;
+    border-radius: 20px;
+}
+
 ::-webkit-scrollbar {
     width: 7px;
 }
