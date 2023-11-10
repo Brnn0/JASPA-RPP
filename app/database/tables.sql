@@ -29,4 +29,3 @@ CREATE TABLE IF NOT EXISTS animais (
     info            TEXT NOT NULL,
     situacao        BOOLEAN NOT NULL
 );
-

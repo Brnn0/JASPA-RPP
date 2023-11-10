@@ -3,7 +3,7 @@
 <div class="info-container">
     <div class="info-details">
         <div class="info-img">
-            <img src="<?=$animal['foto']?>" alt="Imagem">
+            <img src="<?=serverUrl().$animal['foto']?>" alt="Imagem">
         </div>
 
         <div class="info-title">
@@ -15,7 +15,9 @@
             <p class="title-status">
                 Ameaçado por: <strong class="status"><?=$animal['ameaca']?></strong>
             </p>
-            <p class="info-text"><?=$animal['info']?></p> 
+            <div class="info-box scroll-info">
+                <p class="info-text"><?=$animal['info']?></p> 
+            </div>
         </div>
     </div>
     

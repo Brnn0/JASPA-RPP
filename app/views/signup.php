@@ -58,7 +58,8 @@ include 'layout-top.php' ?>
             
             <div class="btn-user-container">
                 <button class='btn-account'>Registrar</button><br>
-                <a class='redirect' href="<?=route("login")?>">logar</a>
+                <a class='redirect' href="<?=route("login")?>">Logar</a>
+                <a class='redirect' href="<?=route("signup")?>">Novo</a>
             </div>
         </form>
 

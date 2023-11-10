@@ -11,9 +11,10 @@
 
 <?php if ($resultado): ?>
     <h2 class="gameDesc game-correct">Animal certo!</h2>
-    <audio autoplay src="public\assets\audio\audio-correct.mp3"></audio>
+    <audio autoplay src="<?=serverUrl().'public\assets\audio\audio-correct.wav'?>"></audio>
 <?php else: ?>
     <h2 class="gameDesc game-wrong">Animal errado!</h2>
+    <audio autoplay src="<?=serverUrl().'public\assets\audio\audio-wrong.wav'?>"></audio>
 <?php endif; ?>
 
 
@@ -29,7 +30,7 @@
             ?>
                 <div class="card-title"><?=$animal['nome']?></div>
                 <div class="animal-img">
-                    <img class="animal-photo" src="<?=$animal['foto']?>" alt="Imagem">
+                    <img class="animal-photo" src="<?=serverUrl().$animal['foto']?>" alt="Imagem">
                 </div>
 
                 <?php if ($animal['situacao'] != false) {

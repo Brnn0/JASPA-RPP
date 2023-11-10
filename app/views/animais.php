@@ -16,7 +16,7 @@
         <form method='POST' action='<?=route('animais/salvar/'._v($data,"id"))?>'>
         
             <input type="text" class="form-control" name="nome" placeholder="Nome" value="<?=_v($data,"nome")?>" >
-            <input type="text" class="form-control" name="foto" placeholder="Foto (URL)" value="<?=_v($data,"foto")?>" >
+            <input type="text" class="form-control" name="foto" placeholder="Caminho da foto" value="<?=_v($data,"foto")?>" >
             <input type="text" class="form-control" name="ameaca" placeholder="Ameaça" value="<?=_v($data,"ameaca")?>" >
         
             <textarea type="text" class="form-control-info" name="info" placeholder="Info." value="<?=_v($data,"info")?>" ></textarea>
