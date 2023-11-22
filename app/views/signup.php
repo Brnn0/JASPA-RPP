@@ -22,18 +22,18 @@ include 'layout-top.php' ?>
         </div>
     <?php endif; ?>
 
-        <form method='POST' action='<?=route('signup/salvar/') . _v($data,"id") ?>'>
+        <form method='POST' autocomplete="off" action='<?=route('signup/salvar/') . _v($data,"id") ?>'>
 
             <h1 class="titleSimple" style="margin-bottom: 20px" >
                 Cadastrar
             </h1>
 
-            <input type="text" class="form-control <?=hasError("nome","is-invalid")?>" name="nome" value="<?=old("nome", _v($data,"nome"))?>" placeholder="Nome"> 
+            <input type="text" autocomplete="off" class="form-control <?=hasError("nome","is-invalid")?>" name="nome" value="<?=old("nome", _v($data,"nome"))?>" placeholder="Nome"> 
             <div class='invalid-feedback'><?=getValidationError("nome") ?></div>
 
-            <input type="email" class="form-control" name="email" placeholder="E-Mail" value="<?=old("email", _v($data,"email"))?>" >
+            <input type="email" autocomplete="off" class="form-control" name="email" placeholder="E-Mail" value="<?=old("email", _v($data,"email"))?>" >
 
-            <input type="password" class="form-control" name="senha" placeholder="Senha" value="" >
+            <input type="password" autocomplete="off" class="form-control" name="senha" placeholder="Senha" value="" >
 
 
             <label class='col-md-4' style='position:relative'>

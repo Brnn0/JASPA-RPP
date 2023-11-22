@@ -3,12 +3,21 @@ use models\Signup;
 
 class AutenticacaoController {
 
+    private $home = "signup";
+
     function index(){
+
+        if (isset($_SESSION['signup'])){
+            redirect($this->home);
+            die();
+        }
+
         #variáveis que serao passados para a view
         $send = [];
         #chama a view
-        render("login", $send);
+        render("auth/login", $send);
     }
+
     function logar(){
 
         $model = new Signup();
@@ -22,15 +31,13 @@ class AutenticacaoController {
         } else {
             #caso contrario, manda para o login novamente
             $send = ["msg"=>"Login ou senha inválida"];
-            render("signup", $send);
+            render("login", $send);
         }
         
     }
     function logout(){
         session_destroy();
-        redirect("autenticacao");
+        redirect("account");
     }
-
-    
 
 }

@@ -24,7 +24,7 @@ if (isset($_SESSION['user'])):
 
 <div class="container">
 
-
+</div>
 
 <script src="https://unpkg.com/imask"></script>
 

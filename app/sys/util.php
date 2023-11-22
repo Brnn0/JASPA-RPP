@@ -73,7 +73,12 @@ function getValidationError($field){
     }
 }
 
-function old($field, $default){
+function old($field, $default=null){
+    //se for array usa o mesmo field como chave
+    if (is_array($default)){
+        return _v($default,$field);
+    }
+
     if (isset($_SESSION['old']) && isset($_SESSION['old'][$field])){
         return $_SESSION['old'][$field];
     } else {
@@ -110,5 +115,17 @@ function getFlash($key){
     }
 }
 
+function print_pdo_error($sql, $data=[]){
+    global $DEBUG_MODE;
+    global $pdo;
+    
+    if ($DEBUG_MODE) {
+        foreach($data as $key=>$value){
+            $sql = str_replace($key, '\'' . str_replace('\'', '\\\'', $value) . '\'', $sql);
+        }
 
+        $msg = $pdo->errorInfo();
+        print "<div class='codeError'>$sql<br/><br/>{$msg[2]}</div>";
+    }
+}
 
