@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2023 at 01:33 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Tempo de geração: 23/11/2023 às 12:16
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `jaspa`
+-- Banco de dados: `jaspa`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `animais`
+-- Estrutura para tabela `animais`
 --
 
 CREATE TABLE `animais` (
@@ -37,7 +37,7 @@ CREATE TABLE `animais` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `animais`
+-- Despejando dados para a tabela `animais`
 --
 
 INSERT INTO `animais` (`id`, `nome`, `foto`, `ameaca`, `info`, `situacao`) VALUES
@@ -136,7 +136,7 @@ INSERT INTO `animais` (`id`, `nome`, `foto`, `ameaca`, `info`, `situacao`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `score`
+-- Estrutura para tabela `score`
 --
 
 CREATE TABLE `score` (
@@ -146,23 +146,16 @@ CREATE TABLE `score` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `score`
+-- Despejando dados para a tabela `score`
 --
 
 INSERT INTO `score` (`id_user`, `id`, `score`) VALUES
-(1, 71, 10),
-(1, 72, 10),
-(1, 73, 10),
-(1, 74, 10),
-(1, 75, 10),
-(1, 76, 10),
-(1, 77, 10),
-(1, 78, 10);
+(NULL, 84, 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estrutura para tabela `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -175,64 +168,63 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `usuarios`
+-- Despejando dados para a tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `dataNascimento`, `email`, `tipo`, `senha`) VALUES
-(1, 'Admin', '01/01/2000', 'adm@adm.com', 5, '276f1e72d6164794306e9a11532eb82919063e715070a89cf1bf8c5e8e803ccf'),
-(2, 'Comum', '01/01/2000', 'comum@comum.com', 1, '5a56f6debeffa3535aefcf66743b73c2512ef1b41755e8e9ef7bbefaa047d530');
+(5, 'Admin', '01/01/2000', 'adm@gmail.com', 5, 'febba865826b3e04423ae2f89d54ca908467af354f2c7f140b99439cb970425c');
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `animais`
+-- Índices de tabela `animais`
 --
 ALTER TABLE `animais`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `score`
+-- Índices de tabela `score`
 --
 ALTER TABLE `score`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indexes for table `usuarios`
+-- Índices de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `animais`
+-- AUTO_INCREMENT de tabela `animais`
 --
 ALTER TABLE `animais`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
--- AUTO_INCREMENT for table `score`
+-- AUTO_INCREMENT de tabela `score`
 --
 ALTER TABLE `score`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Constraints for dumped tables
+-- Restrições para tabelas despejadas
 --
 
 --
--- Constraints for table `score`
+-- Restrições para tabelas `score`
 --
 ALTER TABLE `score`
   ADD CONSTRAINT `score_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `usuarios` (`id`);
